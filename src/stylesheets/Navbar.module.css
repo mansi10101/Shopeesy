@@ -2,8 +2,9 @@
     display:"flex";
     width: 100%;
 }
+
 .navcontent{
-    background-color: white;
+    
     justify-content: space-between;
     width: 100%;
 }
@@ -42,8 +43,4 @@
     font-weight: bold;
     padding: 5px;
 
-}
-.tabtext:hover{
-    color: red;
-    transition: 0.6s;
 }

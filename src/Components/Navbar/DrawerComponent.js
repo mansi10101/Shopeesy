@@ -15,38 +15,47 @@ function DrawerComponent() {
 
   return (
     <div>
-      <Drawer
-        open={open}
-        anchor={'left'}
-        onClose={() => setOpen(false)}
-      >
+      <Drawer open={open} anchor={'right'} onClose={() => setOpen(false)}>
         <List>
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-            <NavLink className={styles.navlinks}  to='/'>Home</NavLink>
+              <NavLink className={styles.navlinks} to='/'>
+                Home
+              </NavLink>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-            <NavLink className={styles.navlinks}  to='/shop'>Shop</NavLink>
+              <NavLink className={styles.navlinks} to='/shop'>
+                Shop
+              </NavLink>
             </ListItemText>
-          </ListItem> <ListItem onClick={() => setOpen(false)}>
+          </ListItem>{' '}
+          <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-            <NavLink className={styles.navlinks}  to='/blog'>Blog</NavLink>
+              <NavLink className={styles.navlinks} to='/blog'>
+                Blog
+              </NavLink>
             </ListItemText>
-          </ListItem> <ListItem onClick={() => setOpen(false)}>
+          </ListItem>{' '}
+          <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-            <NavLink className={styles.navlinks}  to='/about'>About</NavLink>
+              <NavLink className={styles.navlinks} to='/about'>
+                About
+              </NavLink>
             </ListItemText>
-          </ListItem> <ListItem onClick={() => setOpen(false)}>
+          </ListItem>{' '}
+          <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-            <NavLink className={styles.navlinks}  to='/contact'>Contact</NavLink>
+              <NavLink className={styles.navlinks} to='/contact'>
+                Contact
+              </NavLink>
             </ListItemText>
           </ListItem>
         </List>
       </Drawer>
       <IconButton onClick={() => setOpen(!open)}>
-        <MenuIcon />
+        <MenuIcon sx={{ color: 'secondary.dark', fontSize: '2.7rem' }} />
       </IconButton>
     </div>
   );
