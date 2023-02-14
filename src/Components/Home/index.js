@@ -1,6 +1,8 @@
 import React from 'react';
+import CardsWrapper from './CardsWrapper';
 import Featured from './Featured';
 import HeroBanner from './HeroBanner';
+import MiddleBanner from './MiddleBanner';
 
 
 const Home = () => {
@@ -8,7 +10,10 @@ const Home = () => {
     <div>
       <HeroBanner/>
       <Featured/>
-
+      <CardsWrapper/>
+      <MiddleBanner/>
+      <br/>
+      <br/>
     </div>
   );
 };

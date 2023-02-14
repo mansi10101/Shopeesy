@@ -44,10 +44,10 @@ img {
   justify-content: space-evenly;
 }
 
+
 .cards_item {
   display: flex;
 }
-
 
 .card {
   background-color: white;
@@ -61,3 +61,4 @@ img {
 .card_content {
   padding: 1rem;
 }
+
