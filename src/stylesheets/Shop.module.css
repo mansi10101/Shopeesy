@@ -1,9 +1,64 @@
 .shopbody{
     margin-top: 100px;
 }
-.bgimage {
-    size: cover;
-    position: relative;
+.section_m1{
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 100%;
-    margin-bottom: 20px;
-}
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+  }
+.btext1{
+    margin: 0px 0px;
+    color: whitesmoke;
+    font-size: 28px;
+  }
+  .btext2{
+    color: white;
+    font-size: 4rem;
+    margin: 10px 0px;
+  }
+  #mbanner h1 span{
+    color: red;
+  }
+
+
+  /* cards */
+
+  .cards{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(350px,3fr));
+    gap:15px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 499px) {
+    #mbanner h2{
+      font-size: 1rem;
+    }
+    #mbanner h1{
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (min-width: 500px) and (max-width: 900px) {
+    #mbanner h2{
+      font-size: 1.5rem;
+    }
+    #mbanner h1{
+      font-size: 2rem;
+    }
+    .section_m1{
+        height:70vh;
+    }
+  }
+
+
+
+
+ 
