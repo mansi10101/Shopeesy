@@ -6,6 +6,8 @@ import Shop from './Shop';
 import Blog from './Blog';
 import About  from './About';
 import Contact from './Contact';
+import NewsLetter from './NewsLetter';
+import Footer from './Footer';
 
 const Layout = () => {
   return (
@@ -19,6 +21,8 @@ const Layout = () => {
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
         </Routes>
+        <NewsLetter/>
+        <Footer/>
       </BrowserRouter>
     </div>
   );

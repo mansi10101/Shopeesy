@@ -1,0 +1,9 @@
+.shopbody{
+    margin-top: 100px;
+}
+.bgimage {
+    size: cover;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}

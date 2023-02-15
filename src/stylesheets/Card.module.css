@@ -26,29 +26,33 @@
 .product{
   overflow:hidden;
   width: 350px;
-  text-align: center;
+  text-align: left;
   background-color: #fff;
   border: 1px solid rgb(247, 242, 242);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 25px;
+  padding:7px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  transition: transform 200ms;
 }
-
+.product:hover{
+  transform: scale(1.05);
+  background: rgb(230, 240, 243);
+}
 .product_thumb img{
   width: 100%;
   height: auto;
-  padding:5px;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 .title h6{
-  margin-bottom: 10px;
   font-size:1.5rem;
   font-family: "Poppins";
   color: #18181D;
+  margin-bottom: 0;
 }
 
 .price{
-  margin:15px 0;
   font-size: 1.6rem;
 }
 
@@ -56,6 +60,7 @@
   color: black;
   font-weight: 700;
   font-family: "arial";
+  padding-top: 0;
 }
 
 .btn{
@@ -66,7 +71,7 @@
   cursor: pointer;
   text-align: center;
   background-color: #b9ab11;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 600;
   font-family: "Poppnins", sans-serif;
   padding: 12px 30px;
@@ -79,7 +84,33 @@
   background-color: #3c3c3c;
 }
 
-@media screen and (max-width: 669px) {
+.card_content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .product{
+    width: 355px;
+  }
+  .heading1{
+    letter-spacing: 0;
+    font-size: 2rem;
+  }
+  .heading2{
+    letter-spacing: 0;
+    font-size: 1rem;
+  }
+  .title h6{
+    font-size:0.8rem;
+    margin-bottom: 0;
+  }
+  .price span{
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 700px) {
   .product{
     width: 300px;
   }
@@ -93,21 +124,14 @@
     font-size: 1rem;
     letter-spacing: 0;
   }
-}
-@media screen and (max-width: 350px) {
-  .product{
-    width: 355px;
+  .title h6{
+    font-size:1.3rem;
+    margin-bottom: 0;
   }
-  .btn{
-    padding: 10px 10px;
-  }
-  .heading1{
-    letter-spacing: 0;
+  .price span{
     font-size: 1.5rem;
-  }
-  .heading2{
-    letter-spacing: 0;
-    font-size: 1rem;
+    margin-top: 0;
   }
 }
+
 

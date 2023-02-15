@@ -198,7 +198,7 @@ a.htbutton{
   margin-bottom: 0;
 }
 
-  @media screen and (min-width: 320px) and (max-width: 480px) {
+  @media screen and (min-width: 320px) and (max-width: 499px) {
     .httext1{
       font-size: 1rem;
     }

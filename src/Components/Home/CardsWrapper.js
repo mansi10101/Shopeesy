@@ -4,11 +4,12 @@ import Card from './Card';
 import Carousel from 'react-elastic-carousel';
 
 const breakPonts = [
-  { width: 1, itemsToShow: 1 },
+  { width: 1, itemsToShow: 2 },
   { width: 550, itemsToShow: 2 },
   { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 },
+  { width: 1200, itemsToShow: 5 },
 ];
+
 
 const CardsWrapper = ({ h1, h2, f1, f2, f3, f4, f5, f6, f7, f8 }) => {
   return (

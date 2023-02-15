@@ -51,7 +51,7 @@ const Navbar = () => {
           <CssBaseline />
           <Toolbar className={styles.navcontent}>
             <div>
-              <LogoSVG width='200px' />
+              <LogoSVG width='200px'/>
             </div>
             <div className={styles.router}>
               <div>{!isMobile && <Router show={show} />}</div>
