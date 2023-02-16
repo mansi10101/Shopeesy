@@ -8,7 +8,7 @@ const ShopCard = ({ image }) => {
 
   return (
     <Fragment>
-      <Link to={ '/product' }>
+      <Link to={ '/shop/product' }>
     <div className={styles.product}>
       <div className={styles.product_thumb}>
         <a href='#'>
