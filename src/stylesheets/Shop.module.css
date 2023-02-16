@@ -32,12 +32,68 @@
 
   .cards{
     display: grid;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     grid-template-columns: repeat(auto-fit,minmax(350px,3fr));
     gap:15px;
   }
 
+  *, *::before, *::after{
+    text-decoration: none;
+  }
+  
+  .product{
+    justify-content: center;
+    overflow:hidden;
+    width: 350px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid rgb(247, 242, 242);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding:7px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: transform 200ms;
+  }
+  .product:hover{
+    transform: scale(1.05);
+    background: rgb(230, 240, 243);
+  }
+  .product_thumb img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  .title h6{
+    font-size:1.5rem;
+    font-family: "Poppins";
+    color: #18181D;
+    margin-bottom: 0;
+    text-decoration: none;
+  
+  }
+  
+  .price{
+    font-size: 2rem;
+    text-decoration: none;
+  }
+  
+  .price span{
+    color: black;
+    font-weight: 700;
+    font-family: "arial";
+    padding-top: 0;
+  }
+  
+  .card_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
   @media screen and (min-width: 320px) and (max-width: 499px) {
     #mbanner h2{
       font-size: 1rem;
@@ -45,8 +101,39 @@
     #mbanner h1{
       font-size: 1.5rem;
     }
+    .title h6{
+      font-size:1rem;
+      margin-bottom: 0;
+    }
+    .price span{
+      font-size: 1.5rem;
+    }
   }
-  @media screen and (min-width: 500px) and (max-width: 900px) {
+  @media screen and (min-width: 500px) and (max-width: 690px){
+    .title h6{
+      font-size:1.3rem;
+      margin-bottom: 0;
+    }
+    .price span{
+      font-size: 2rem;
+      margin-top: 0;
+    }
+    .product{
+      width:400px;
+    }
+    .cards{
+        grid-template-columns: repeat(auto-fit,minmax(310px,3fr));
+    }
+  }
+  @media screen and (min-width: 690px) and (max-width: 900px) {
+    .title h6{
+      font-size:1.3rem;
+      margin-bottom: 0;
+    }
+    .price span{
+      font-size: 2rem;
+      margin-top: 0;
+    }
     #mbanner h2{
       font-size: 1.5rem;
     }
@@ -56,9 +143,19 @@
     .section_m1{
         height:70vh;
     }
+    .product{
+      width: 350px;
+    }
+    .cards{
+        grid-template-columns: repeat(auto-fit,minmax(329px,3fr));
+    }
   }
 
 
-
+  @media screen and (min-width: 900px) and (max-width: 1200px){
+    .product{
+      width: 350px
+    }
+  }
 
  

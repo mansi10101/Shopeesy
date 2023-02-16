@@ -1,3 +1,6 @@
+*, *::before, *::after{
+  text-decoration: none;
+}
 .heading{
   display: grid;
   justify-content: center;
@@ -33,6 +36,7 @@
   padding:7px;
   margin-bottom: 20px;
   margin-top: 20px;
+  text-decoration: none;
   transition: transform 200ms;
 }
 .product:hover{
@@ -50,10 +54,13 @@
   font-family: "Poppins";
   color: #18181D;
   margin-bottom: 0;
+  text-decoration: none;
+
 }
 
 .price{
   font-size: 2rem;
+  text-decoration: none;
 }
 
 .price span{
@@ -92,7 +99,7 @@
 }
 @media screen and (min-width: 300px) and (max-width: 500px) {
   .product{
-    width: 355px;
+    width: 200px;
   }
   .heading1{
     letter-spacing: 0;
@@ -112,7 +119,7 @@
 }
 @media screen and (min-width: 501px) and (max-width: 700px) {
   .product{
-    width: 300px;
+    width: 200px;
   }
   .btn{
     padding: 20px 30px;
@@ -133,5 +140,19 @@
     margin-top: 0;
   }
 }
+@media screen and (min-width: 701px) and (max-width: 1200px){
+  .product{
+    width: 250px
+  }
+  .title h6{
+    font-size:1.3rem;
+    margin-bottom: 0;
+  }
+  .price span{
+    font-size: 2rem;
+    margin-top: 0;
+  }
+}
+
 
 

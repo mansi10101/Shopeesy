@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../../stylesheets/Card.module.css';
+import styles from '../../stylesheets/Shop.module.css';
 import Rating from '@mui/material/Rating';
 
-const Card = ({ image }) => {
+const ShopCard = ({ image }) => {
   const [value, setValue] = React.useState(5);
 
   return (
@@ -35,4 +35,4 @@ const Card = ({ image }) => {
   );
 };
 
-export default Card;
+export default ShopCard;

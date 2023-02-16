@@ -15,7 +15,7 @@ const Layout = () => {
       <BrowserRouter>
       <Navbar />
         <Routes>
-            <Route index element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             <Route path='/shop' element={<Shop />} />
             <Route path='/blog' element={<Blog />} />
             <Route path='/about' element={<About />} />

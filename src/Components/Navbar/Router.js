@@ -21,7 +21,7 @@ const Router = ({ show }) => {
     lineHeight: 'normal',
   };
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 

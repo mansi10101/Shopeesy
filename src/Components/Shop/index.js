@@ -21,54 +21,53 @@ import n5 from "../../assets/img/products/n5.jpg";
 import n6 from "../../assets/img/products/n6.jpg";
 import n7 from "../../assets/img/products/n7.jpg";
 import n8 from "../../assets/img/products/n8.jpg";
-
-import Card from '../Home/Card';
+import ShopCard from '../Shop/ShopCard';
 
 const Shop = () => {
     return (
         <div className={styles.shopbody} >
             <TopBanner/>
-            <div className={styles.cards} style={{padding:"5% 10%"}}>
-            <Card image={f1} />
-            <Card image={f2} />
-            <Card image={f11} />
-            <Card image={f5} />
-            <Card image={f6} />
-            <Card image={f7} />
-            <Card image={n1} />
-            <Card image={n2} />
-            <Card image={n3} />
-            <Card image={f4} />
-            <Card image={f3} />
-            <Card image={f13} />
-            <Card image={n4} />
-            <Card image={n5} />
-            <Card image={f14} />
-            <Card image={f15} />
-            <Card image={f16} />
-            <Card image={n6} />
-            <Card image={n7} />
-            <Card image={n8} />
-            <Card image={f1} />
-            <Card image={f2} />
-            <Card image={f11} />
-            <Card image={f5} />
-            <Card image={f6} />
-            <Card image={f7} />
-            <Card image={n1} />
-            <Card image={n2} />
-            <Card image={n3} />
-            <Card image={f4} />
-            <Card image={f3} />
-            <Card image={f13} />
-            <Card image={n4} />
-            <Card image={n5} />
-            <Card image={f14} />
-            <Card image={f15} />
-            <Card image={f16} />
-            <Card image={n6} />
-            <Card image={n7} />
-            <Card image={n8} />
+            <div className={styles.cards} >
+            <ShopCard image={f1} />
+            <ShopCard image={f2} />
+            <ShopCard image={f11} />
+            <ShopCard image={f5} />
+            <ShopCard image={f6} />
+            <ShopCard image={f7} />
+            <ShopCard image={n1} />
+            <ShopCard image={n2} />
+            <ShopCard image={n3} />
+            <ShopCard image={f4} />
+            <ShopCard image={f3} />
+            <ShopCard image={f13} />
+            <ShopCard image={n4} />
+            <ShopCard image={n5} />
+            <ShopCard image={f14} />
+            <ShopCard image={f15} />
+            <ShopCard image={f16} />
+            <ShopCard image={n6} />
+            <ShopCard image={n7} />
+            <ShopCard image={n8} />
+            <ShopCard image={f1} />
+            <ShopCard image={f2} />
+            <ShopCard image={f11} />
+            <ShopCard image={f5} />
+            <ShopCard image={f6} />
+            <ShopCard image={f7} />
+            <ShopCard image={n1} />
+            <ShopCard image={n2} />
+            <ShopCard image={n3} />
+            <ShopCard image={f4} />
+            <ShopCard image={f3} />
+            <ShopCard image={f13} />
+            <ShopCard image={n4} />
+            <ShopCard image={n5} />
+            <ShopCard image={f14} />
+            <ShopCard image={f15} />
+            <ShopCard image={f16} />
+            <ShopCard image={n6} />
+            <ShopCard image={n7} />
+            <ShopCard image={n8} />
             </div>
               
         </div>
