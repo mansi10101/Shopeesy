@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { AllProducts } from '../../utils/constants';
 import Rating from '@mui/material/Rating';
 import styles from '../../stylesheets/Shop.module.css';
+import CardsWrapper from '../Home/CardsWrapper';
+import {Feature} from '../../utils/constants';
+
 
 const Product = () => {
   const [item, setItem] = React.useState({});
@@ -17,6 +20,7 @@ const Product = () => {
   console.log(item)
 
   return (
+    <Fragment>
     <div className={styles.app}>
       <div className={styles.details}>
         <div className={styles.big_img}>
@@ -41,6 +45,11 @@ const Product = () => {
         </div>
       </div>
     </div>
+    <CardsWrapper
+        h1='Featured Products'
+        products = {Feature}
+      />
+    </Fragment>
   );
 };
 

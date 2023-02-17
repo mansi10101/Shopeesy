@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from '../../stylesheets/Card.module.css';
 import Rating from '@mui/material/Rating';
 
-const Card = ({ product,key }) => {
+const Card = ({ product }) => {
   return (
     <Fragment>
       <Link to={ `/product/${product.id}` } >

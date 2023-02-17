@@ -8,7 +8,7 @@ import f4 from '../../assets/img/features/f4.png';
 import f5 from '../../assets/img/features/f5.png';
 import f6 from '../../assets/img/features/f6.png';
 
-const Featured = ({ image, text, colour }) => {
+const Featured = () => {
   return (
     <div>
       <div className={styles.main}>

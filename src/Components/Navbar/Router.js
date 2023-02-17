@@ -38,7 +38,6 @@ const Router = ({ show }) => {
         <Tabs value={value} onChange={handleChange} centered>
           <Tab sx={style} label='Home' to='/' component={Link} />
           <Tab sx={style} label='Shop' to='/shop' component={Link} />
-          <Tab sx={style} label='BLOG' to='/blog' component={Link} />
           <Tab sx={style} label='about' to='/about' component={Link} />
           <Tab sx={style} label='conatct' to='/contact' component={Link} />
         </Tabs>

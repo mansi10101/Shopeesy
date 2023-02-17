@@ -33,13 +33,6 @@ function DrawerComponent() {
           </ListItem>{' '}
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-              <NavLink className={styles.navlinks} to='/blog'>
-                Blog
-              </NavLink>
-            </ListItemText>
-          </ListItem>{' '}
-          <ListItem onClick={() => setOpen(false)}>
-            <ListItemText>
               <NavLink className={styles.navlinks} to='/about'>
                 About
               </NavLink>
