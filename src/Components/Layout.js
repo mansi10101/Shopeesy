@@ -12,7 +12,10 @@ import Product from './Shop/Product';
 
 const Layout = () => {
   return (
-    <div>
+    <div style={{
+      display: "grid",
+      gap: '20',
+    }} >
       <BrowserRouter>
       <Navbar />
         <Routes>
@@ -21,7 +24,7 @@ const Layout = () => {
             <Route path='/blog' element={<Blog />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/shop/product/:id' element={<Product />} />
+            <Route path='/product/:id' element={<Product />} />
         </Routes>
         <NewsLetter/>
         <Footer/>

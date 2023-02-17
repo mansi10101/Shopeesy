@@ -4,15 +4,12 @@ import styles from '../../stylesheets/Shop.module.css';
 import Rating from '@mui/material/Rating';
 
 const ShopCard = ({ key,product }) => {
-
   return (
     <Fragment>
-      <Link to={ `product/${product.id} `}>
+      <Link to={ `/product/${product.id} `}>
     <div className={styles.product}>
       <div className={styles.product_thumb}>
-        <a href='#'>
           <img src={product.img} alt='' />
-        </a>
       </div>
       <div className={styles.product_body}>
         <div className={styles.title}>

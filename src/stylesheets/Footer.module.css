@@ -10,6 +10,7 @@ body{
     background-image: url("../assets/img/banner/b14.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     background-color: #24262b;
     padding: 3% 6%;
     margin-top: 5%;

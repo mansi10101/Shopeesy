@@ -24,7 +24,7 @@ const CardsWrapper = ({ f1,h1, h2, products }) => {
             {products.map((product) => {
               return (
                 <Card
-                  key={product.id}
+                  key={product.sno}
                   product={product}
                 />
               );

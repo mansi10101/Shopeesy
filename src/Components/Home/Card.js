@@ -4,10 +4,9 @@ import styles from '../../stylesheets/Card.module.css';
 import Rating from '@mui/material/Rating';
 
 const Card = ({ product,key }) => {
-  console.log(product)
   return (
     <Fragment>
-      <Link to={ `product/${product.id}` } >
+      <Link to={ `/product/${product.id}` } >
     <div className={styles.product}>
       <div className={styles.product_thumb}>
           <img src={product.img} alt=''/>

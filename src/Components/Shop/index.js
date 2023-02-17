@@ -11,7 +11,7 @@ const Shop = () => {
             <div className={styles.cards} >
                {AllProducts.map((product) => {
                 return (
-                    <ShopCard key={product.id} product={product} />
+                    <ShopCard key={product.sno} product={product} />
                 )
                })}
             </div>
