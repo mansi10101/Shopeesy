@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../stylesheets/About.module.css';
-import bimage from '../assets/img/about/banner.png';
+import bimage from "../assets/img/banner/b1.jpg"
 import TopBanner from './TopBanner';
 import image from '../assets/img/about/a6.jpg';
 import Featured from './Home/Featured';

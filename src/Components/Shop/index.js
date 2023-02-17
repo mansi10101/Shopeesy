@@ -3,7 +3,7 @@ import styles from '../../stylesheets/Shop.module.css';
 import TopBanner from '../TopBanner';
 import ShopCard from '../Shop/ShopCard';
 import { AllProducts } from '../../utils/constants';
-import bimage from "../../assets/img/banner/b1.jpg"
+import bimage from "../../assets/img/banner/b8.jpg"
 
 const Shop = () => {
   return (
