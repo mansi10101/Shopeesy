@@ -4,7 +4,7 @@ import Featured from './Featured';
 import HeroBanner from './HeroBanner';
 import MiddleBanner from './MiddleBanner';
 import SMBanner from './SMBanner';
-import {Feature} from '../../utils/constants';
+import {Feature,NewArrivals} from '../../utils/constants';
 
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
       <CardsWrapper
         h1='Featured Products'
         h2='Summer Collection New Modern Designs'
-        feature = {Feature}
+        products = {Feature}
       />
       <br/>
       <br/><br/>
@@ -28,7 +28,7 @@ const Home = () => {
       <CardsWrapper
         h1='New Arrivals'
         h2='Summer Collection New Modern Designs'
-        feature = {Feature}
+        products = {NewArrivals}
       />
       <br />
       <br />

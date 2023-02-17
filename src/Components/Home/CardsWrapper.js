@@ -10,7 +10,7 @@ const breakPonts = [
   { width: 1200, itemsToShow: 5 },
 ];
 
-const CardsWrapper = ({ f1,h1, h2, feature }) => {
+const CardsWrapper = ({ f1,h1, h2, products }) => {
   return (
     <Fragment>
       <section>
@@ -21,7 +21,7 @@ const CardsWrapper = ({ f1,h1, h2, feature }) => {
           </div>
           <br />
           <Carousel breakPoints={breakPonts}>
-            {feature.map((product) => {
+            {products.map((product) => {
               return (
                 <Card
                   key={product.id}

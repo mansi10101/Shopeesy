@@ -7,7 +7,7 @@ const Card = ({ product,key }) => {
   console.log(product)
   return (
     <Fragment>
-      <Link to={ `/shop/product/${key}` } >
+      <Link to={ `product/${product.id}` } >
     <div className={styles.product}>
       <div className={styles.product_thumb}>
           <img src={product.img} alt=''/>
@@ -18,7 +18,7 @@ const Card = ({ product,key }) => {
         </div>
         <div className={styles.card_content}>
           <div className={styles.star}>
-            <Rating name='read-only' value={product.value} readOnly />
+            <Rating name='read-only' value={product.rating} readOnly />
           </div>
 
           <div className={styles.price}>
