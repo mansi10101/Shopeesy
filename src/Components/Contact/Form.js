@@ -12,7 +12,7 @@ const Form = () => {
           <div className={styles.info}>
             <h2>LEAVE A MESSAGE!</h2>
             <h1> We love to here from you:)</h1>
-            <form action='' method='POST' className={styles.contact_input}>
+            <form action='https://formspree.io/f/meqwgeon' method='POST' className={styles.contact_input}>
               <input
                 type='text'
                 placeholder='Your Name'
