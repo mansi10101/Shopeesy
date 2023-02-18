@@ -1,0 +1,141 @@
+.contact {
+    max-width: 1600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+.location {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+
+.address {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 800px;
+    min-width: 290px;
+    background-color: white;
+    padding: 20px;
+}
+
+.location .map {
+    min-width: 290px;
+    overflow: hidden;
+    margin: 25px;
+}
+
+.map iframe {
+    width: "100%"
+}
+
+.lists {
+    display: grid;
+}
+
+.address h1 {
+    font-size: 3rem;
+    font-family: "cursive";
+}
+
+.address h2 {
+    font-size: 1.7rem;
+    color: rgb(104, 101, 99);
+}
+
+.address li {
+    line-height: 1.5;
+    margin: 15px 0;
+    font-size: 1.4rem;
+}
+
+/* form  */
+.form_container {
+    width: 100%;
+    padding: 30px 0
+}
+
+.contact_form {
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info {
+    width: 600px;
+    min-width: 290px;
+    background-color: white;
+    padding: 20px;
+}
+
+.contact_input {
+    display: flex;
+    flex-direction: column;
+}
+
+.info h2{
+    font-weight: 100;
+    color: rgb(97, 97, 85);
+}
+.info h1{
+    font-size: 2.5rem;
+    font-family: arial;
+    font-weight: 550;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    font-size: 1.3rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #3c69a4;
+    color: white;
+    padding: 14px 0;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(152, 178, 208);
+    border: 1px solid black;
+    transform: scale(0.9);
+}
+
+.people {
+    display: grid;
+    justify-content: flex-start;
+    align-content:center;
+    gap: 23px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+}
+.people_details h3{
+   font-weight: 400;
+}
