@@ -13,6 +13,7 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import { ThemeProvider, createTheme } from '@mui/system';
 import DrawerComponent from './DrawerComponent';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
@@ -56,9 +57,11 @@ const Navbar = () => {
             <div className={styles.router}>
               <div>{!isMobile && <Router show={show} />}</div>
               <div>
+                <Link to={"/cart"} >
                 <ShoppingBagIcon
                   sx={{ color: 'secondary.dark', fontSize: '2.5rem' }}
                 />
+                </Link>
               </div>
               <div>{isMobile && <DrawerComponent />}</div>
             </div>
