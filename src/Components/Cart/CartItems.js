@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styles from '../../stylesheets/Cart.module.css';
 import Quantity from '../Shop/Quantity';
 import { useCartContext } from '../../context/cart_context';
 import { Divider } from '@mui/material';
 
-const CartItems = ({ id, name, img, price, quantity }) => {
+const CartItems = ({ id, name, img, price, quantity,cartLength }) => {
   const { removeItem,setIncrease,setDecrease } = useCartContext();
 
   return (
+    <Fragment>
     <div className={styles.product}>
       <div className={styles.p_img}>
         <img src={img} alt='' />
@@ -29,8 +30,9 @@ const CartItems = ({ id, name, img, price, quantity }) => {
           Remove
         </button>
       </div>
-      <Divider style={{ border: '1px solid black' }} />
     </div>
+    {cartLength > 1 && <Divider sx={{borderColor: "secondary.dark"}} /> }
+    </Fragment>
   );
 };
 

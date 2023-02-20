@@ -8,13 +8,16 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import FindReplaceIcon from '@mui/icons-material/FindReplace';
 import Quantity from './Quantity';
 import { useCartContext } from '../../context/cart_context';
+// import Alert from './Alert';
 
 const Product = () => {
 
-  const {addToCart} = useCartContext();
+  const {addToCart, cart} = useCartContext();
 
   const [item, setItem] = React.useState({});
   const [quantity, setQuantity] = React.useState(1);
+  const [alert, setAlert] = React.useState(false)
+
 
   const pid = (p_id) => {
     const product = AllProducts.filter((i) => i.id === p_id);
@@ -73,7 +76,8 @@ const Product = () => {
             </div>
 
             <Quantity quantity={quantity} setIncrease={setIncrease} setDecrease={setDecrease} />
-            <button className={styles.cart} onClick={() => addToCart(quantity,item) } >Add to cart</button>
+            <button className={styles.addtocartbtn} onClick={() => addToCart(quantity,item,alert)} >Add to cart</button>
+            {/* <Alert alert={cart.length === 0 ? true: cart[0].alert} /> */}
           </div>
         </div>
       </div>

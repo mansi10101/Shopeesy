@@ -4,7 +4,6 @@ import styles from '../../stylesheets/Shop.module.css';
 const Quantity = ({ quantity, setDecrease, setIncrease }) => {
   return (
     <div className={styles.counter}>
-      <p>Quantity: &nbsp;</p>
       <button className={styles.down} onClick={setDecrease}>
         -
       </button>

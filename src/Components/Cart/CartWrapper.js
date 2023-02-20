@@ -13,10 +13,9 @@ const CartWrapper = () => {
   }
   return (
     <div className={styles.container}>
-     
       <div className={styles.Cart_box}>
         {cart.map((curElem) => {
-          return <CartItems key={curElem.id} {...curElem} />;
+          return <CartItems key={curElem.id} {...curElem} cartLength={cart.length} />;
         })}
       </div>
       <div className={styles.cartsummary}>
