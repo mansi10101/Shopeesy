@@ -7,8 +7,12 @@ import { Feature } from '../../utils/constants';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import FindReplaceIcon from '@mui/icons-material/FindReplace';
 import Quantity from './Quantity';
+import { useCartContext } from '../../context/cart_context';
 
-const Product = ({cartItems, setCartItems}) => {
+const Product = () => {
+
+  const {addToCart} = useCartContext();
+
   const [item, setItem] = React.useState({});
   const [quantity, setQuantity] = React.useState(1);
 
@@ -20,12 +24,15 @@ const Product = ({cartItems, setCartItems}) => {
     const id = window.location.pathname.split('/');
     pid(id[2]);
   }, []);
-  
-  const handleCartItem = () => {
-      setCartItems([...cartItems, {...item,quantity}]);
-      // alert("added")
+
+  const setDecrease = () => {
+    quantity > 1 ? setQuantity(quantity - 1): setQuantity(1);
   }
-  console.log(cartItems)
+
+  const setIncrease = () => {
+    quantity < 10 ? setQuantity(quantity + 1): setQuantity(10);
+  }
+
   return (
     <Fragment>
       <div className={styles.app}>
@@ -37,7 +44,7 @@ const Product = ({cartItems, setCartItems}) => {
           <div className={styles.box}>
             <div className={styles.row}>
               <h2>{item.name}</h2>
-              <span>{item.price}</span>
+              <span>${item.price}</span>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
@@ -64,8 +71,8 @@ const Product = ({cartItems, setCartItems}) => {
               </div>
             </div>
 
-            <Quantity quantity={quantity} setQuantity={setQuantity} />
-            <button className={styles.cart} onClick={() => handleCartItem()} >Add to cart</button>
+            <Quantity quantity={quantity} setIncrease={setIncrease} setDecrease={setDecrease} />
+            <button className={styles.cart} onClick={() => addToCart(quantity,item) } >Add to cart</button>
           </div>
         </div>
       </div>

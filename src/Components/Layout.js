@@ -11,8 +11,6 @@ import Product from './Shop/Product';
 import Cart from './Cart';
 
 const Layout = () => {
-  const [cartItems, setCartItems] = React.useState([]);
-
 
   return (
     <div
@@ -28,8 +26,8 @@ const Layout = () => {
           <Route path='/shop' element={<Shop />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/product/:id' element={<Product cartItems={cartItems} setCartItems={setCartItems} />} />
-          <Route path='/cart' element={<Cart cartItems={cartItems} setCartItems={setCartItems} />} />
+          <Route path='/product/:id' element={<Product />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
         <NewsLetter />
         <Footer />

@@ -6,12 +6,18 @@
     margin-right: auto;
     background-color: white;
 }
-/* .cart_items{
-    margin: 10px;
-    max-height:500px; 
-    overflow-y:auto;
-    height: 40rem;
-} */
+
+.emptydiv{
+    display: grid;
+    place-items: center;
+    height : 50vh;
+}
+.emptydiv h3{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-weight: 300;
+    color: #9d9898;
+}
 .product{
     display: flex;
     justify-content: flex-start;
@@ -56,7 +62,7 @@
   }
 
 
-  @media screen and (min-width: 250px) and (max-width: 500px) {
+  @media screen and (min-width: 250px) and (max-width: 590px) {
     .remove_button{
         padding: 8px 12px;
     }

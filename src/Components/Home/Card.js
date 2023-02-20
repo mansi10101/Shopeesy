@@ -21,7 +21,7 @@ const Card = ({ product }) => {
           </div>
 
           <div className={styles.price}>
-            <span>{product.price}</span>
+            <span>${product.price}</span>
           </div>
         </div>
       </div>
