@@ -23,7 +23,7 @@ const CartItems = ({ id, name, img, price, quantity }) => {
           <Quantity quantity={quantity} setIncrease={() => setIncrease(id)} setDecrease={() => setDecrease(id)} />
         </div>
         <div>
-          <h3>Subtotal: ${price * quantity} </h3>
+          <h2 style={{fontWeight: "539"}}>Subtotal: ${price * quantity} </h2>
         </div>
         <button className={styles.remove_button} onClick={() => removeItem(id)}>
           Remove

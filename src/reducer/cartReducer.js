@@ -11,7 +11,7 @@ const cartReducer = (state, action) => {
         if (curElem.id === item.id) {
           let newquantity = curElem.quantity + quantity;
 
-          if(newquantity > 10){
+          if (newquantity > 10) {
             newquantity = 10;
           }
           return {
@@ -43,54 +43,51 @@ const cartReducer = (state, action) => {
 
   // decrese quanitity
 
-  if(action.type === 'SET_DECREMENT'){
+  if (action.type === 'SET_DECREMENT') {
     let updatedProduct = state.cart.map((curElem) => {
-        if(curElem.id === action.payload){
-            let decQuantity = curElem.quantity - 1;
-            if(decQuantity <= 1){
-                decQuantity = 1;
-            }
-            return {
-                ...curElem,
-                quantity: decQuantity,
-            }
+      if (curElem.id === action.payload) {
+        let decQuantity = curElem.quantity - 1;
+        if (decQuantity <= 1) {
+          decQuantity = 1;
         }
-        else{
-            return curElem;
-        }
-    })
-    return{
-        ...state,
-        cart: updatedProduct,
-    }
+        return {
+          ...curElem,
+          quantity: decQuantity,
+        };
+      } else {
+        return curElem;
+      }
+    });
+    return {
+      ...state,
+      cart: updatedProduct,
+    };
   }
-  
+
   //increase quantity
 
-  if(action.type === 'SET_INCREMENT'){
+  if (action.type === 'SET_INCREMENT') {
     let updatedProduct = state.cart.map((curElem) => {
-        if(curElem.id === action.payload){
-            let IncQuantity = curElem.quantity + 1;
-            if(IncQuantity >= 10){
-                IncQuantity = 10;
-            }
-            return {
-                ...curElem,
-                quantity: IncQuantity,
-            }
+      if (curElem.id === action.payload) {
+        let IncQuantity = curElem.quantity + 1;
+        if (IncQuantity >= 10) {
+          IncQuantity = 10;
         }
-        else{
-            return curElem;
-        }
-    })
-    return{
-        ...state,
-        cart: updatedProduct,
-    }
+        return {
+          ...curElem,
+          quantity: IncQuantity,
+        };
+      } else {
+        return curElem;
+      }
+    });
+    return {
+      ...state,
+      cart: updatedProduct,
+    };
   }
 
-
-//remove item
+  //remove item
   if (action.type === 'REMOVE_ITEM') {
     let updateCart = state.cart.filter(
       (curElem) => curElem.id !== action.payload
@@ -100,8 +97,21 @@ const cartReducer = (state, action) => {
       cart: updateCart,
     };
   }
+  if (action.type === 'TOTAL_PRICE') {
+    let total_price = state.cart.reduce((initialVal, curElem) => {
+      let {price, quantity } = curElem;
+      initialVal = initialVal + price * quantity ;
+      return initialVal;
+    }, 0);
+    return {
+      ...state,
+      total_price: total_price,
+    };
+  }
 
   return state;
 };
+
+//cart total amount
 
 export default cartReducer;

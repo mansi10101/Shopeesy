@@ -153,6 +153,12 @@
     margin-top: 0;
   }
 }
+@media screen and (min-width: 1300px) and (max-width: 1600px) {
+  .product{
+    width: 220px;
+  }
+}
+
 
 
 

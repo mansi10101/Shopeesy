@@ -3,19 +3,26 @@ import { useCartContext } from '../../context/cart_context';
 import CartItems from './CartItems';
 import EmptyDiv from '../EmptyDiv';
 import styles from '../../stylesheets/Cart.module.css';
+import CartSummary from './CartSummary';
 
 const CartWrapper = () => {
-  const { cart } = useCartContext();
-  console.log(cart);
+  const { cart,total_price } = useCartContext();
 
   if (cart.length === 0) {
     return <EmptyDiv text='Cart is Empty' />;
   }
   return (
-    <div className={styles.Cart_box}>
-      {cart.map((curElem) => {
-        return <CartItems key={curElem.id} {...curElem} />;
-      })}
+    <div className={styles.container}>
+     
+      <div className={styles.Cart_box}>
+        {cart.map((curElem) => {
+          return <CartItems key={curElem.id} {...curElem} />;
+        })}
+      </div>
+      <div className={styles.cartsummary}>
+        <CartSummary total_price={total_price}  />   
+        </div>
+          
     </div>
   );
 };

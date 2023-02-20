@@ -254,7 +254,11 @@
     height: 50px;
   }
 }
-
+@media screen and (min-width: 250px) and (max-width: 590px){
+  .counter p{
+    display: none;
+  }
+}
 @media screen and (min-width: 500px) and (max-width: 690px) {
   .title h6 {
     font-size: 1.3rem;

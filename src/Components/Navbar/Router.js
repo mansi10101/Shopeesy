@@ -27,6 +27,7 @@ const Router = ({ show }) => {
 
   return (
     <ThemeProvider theme={theme}>
+      {window.scrollTo(0,0)}
       <Box
         sx={{
           width: '100%',
