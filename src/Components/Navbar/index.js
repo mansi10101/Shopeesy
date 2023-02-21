@@ -7,16 +7,20 @@ import {
   CssBaseline,
   useTheme,
   useMediaQuery,
+  Badge,
 } from '@mui/material';
 import Router from './Router';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { ThemeProvider, createTheme } from '@mui/system';
 import DrawerComponent from './DrawerComponent';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../../context/cart_context';
 
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
+  const {total_item} = useCartContext();
+
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -58,9 +62,11 @@ const Navbar = () => {
               <div>{!isMobile && <Router show={show} />}</div>
               <div>
                 <Link to={"/cart"} >
-                <ShoppingBagIcon
+                <Badge badgeContent={total_item} color="primary">
+                <ShoppingCartIcon
                   sx={{ color: 'secondary.dark', fontSize: '2.5rem' }}
                 />
+                 </Badge>
                 </Link>
               </div>
               <div>{isMobile && <DrawerComponent />}</div>

@@ -8,16 +8,14 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import FindReplaceIcon from '@mui/icons-material/FindReplace';
 import Quantity from './Quantity';
 import { useCartContext } from '../../context/cart_context';
-// import Alert from './Alert';
+import Alert from './Alert';
 
 const Product = () => {
-
-  const {addToCart, cart} = useCartContext();
+  const { addToCart } = useCartContext();
 
   const [item, setItem] = React.useState({});
   const [quantity, setQuantity] = React.useState(1);
-  const [alert, setAlert] = React.useState(false)
-
+  const [alert, setAlert] = React.useState(false);
 
   const pid = (p_id) => {
     const product = AllProducts.filter((i) => i.id === p_id);
@@ -26,16 +24,23 @@ const Product = () => {
   React.useEffect(() => {
     const id = window.location.pathname.split('/');
     pid(id[2]);
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }, []);
 
   const setDecrease = () => {
-    quantity > 1 ? setQuantity(quantity - 1): setQuantity(1);
-  }
+    quantity > 1 ? setQuantity(quantity - 1) : setQuantity(1);
+  };
 
   const setIncrease = () => {
-    quantity < 10 ? setQuantity(quantity + 1): setQuantity(10);
-  }
+    quantity < 10 ? setQuantity(quantity + 1) : setQuantity(10);
+  };
+  const handleAddToCartBtn = () => {
+    addToCart(quantity, item);
+    setAlert(true);
+    setTimeout(() => {
+      setAlert(false);
+    }, 1500);
+  };
 
   return (
     <Fragment>
@@ -75,9 +80,18 @@ const Product = () => {
               </div>
             </div>
 
-            <Quantity quantity={quantity} setIncrease={setIncrease} setDecrease={setDecrease} />
-            <button className={styles.addtocartbtn} onClick={() => addToCart(quantity,item,alert)} >Add to cart</button>
-            {/* <Alert alert={cart.length === 0 ? true: cart[0].alert} /> */}
+            <Quantity
+              quantity={quantity}
+              setIncrease={setIncrease}
+              setDecrease={setDecrease}
+            />
+            <button
+              className={styles.addtocartbtn}
+              onClick={handleAddToCartBtn}
+            >
+              Add to cart
+            </button>
+            <Alert alert={alert} />
           </div>
         </div>
       </div>

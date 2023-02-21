@@ -45,6 +45,20 @@ function DrawerComponent() {
               </NavLink>
             </ListItemText>
           </ListItem>
+          <ListItem onClick={() => setOpen(false)}>
+            <ListItemText>
+              <NavLink className={styles.navlinks} to='/order'>
+                Your Orders
+              </NavLink>
+            </ListItemText>
+          </ListItem>
+          <ListItem onClick={() => setOpen(false)}>
+            <ListItemText>
+              <NavLink className={styles.navlinks} to='/trackorder'>
+                Track Order
+              </NavLink>
+            </ListItemText>
+          </ListItem>
         </List>
       </Drawer>
       <IconButton onClick={() => setOpen(!open)}>

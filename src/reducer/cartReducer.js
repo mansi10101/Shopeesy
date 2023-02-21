@@ -1,6 +1,6 @@
 const cartReducer = (state, action) => {
   if (action.type === 'ADD_TO_CART') {
-    let { quantity, item,alert } = action.payload;
+    let { quantity, item } = action.payload;
     // console.log(item)
 
     //tackling exisiting product
@@ -25,7 +25,6 @@ const cartReducer = (state, action) => {
       return {
         ...state,
         cart: updatedProduct,
-        alert:true,
       };
     } else {
       let cartProduct = {
@@ -34,7 +33,6 @@ const cartReducer = (state, action) => {
         quantity,
         img: item.img,
         price: item.price,
-        alert:true,
       };
       return {
         ...state,
@@ -99,6 +97,22 @@ const cartReducer = (state, action) => {
       cart: updateCart,
     };
   }
+
+  //cart total quantity of items
+  if(action.type === "TOTAL_ITEM"){
+    let total_item = state.cart.reduce((initialVal, curElem) => {
+      let {quantity } = curElem;
+      initialVal = initialVal + quantity ;
+      return initialVal;
+    }, 0);
+    return {
+      ...state,
+      total_item: total_item,
+    };
+  }
+
+
+  //cart total amount
   if (action.type === 'TOTAL_PRICE') {
     let total_price = state.cart.reduce((initialVal, curElem) => {
       let {price, quantity } = curElem;
@@ -113,7 +127,5 @@ const cartReducer = (state, action) => {
 
   return state;
 };
-
-//cart total amount
 
 export default cartReducer;

@@ -12,8 +12,8 @@ const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   //add item to cart
-  const addToCart = (quantity, item,alert) => {
-    dispatch({ type: 'ADD_TO_CART', payload: { quantity, item,alert } });
+  const addToCart = (quantity, item) => {
+    dispatch({ type: 'ADD_TO_CART', payload: { quantity, item } });
   };
 
   //increase decrease quantity
@@ -26,18 +26,14 @@ const CartProvider = ({ children }) => {
     dispatch({ type: 'SET_INCREMENT', payload: id });
   };
 
-  //total price
-//   const totalamount = (quantity, item) => {
-//     dispatch({type: "TOTAL_PRICE", payload: { quantity, item} })
-//   }
-
   //remove item from cart
   const removeItem = (id) => {
     dispatch({ type: 'REMOVE_ITEM', payload: id });
   };
 
   useEffect(() => {
-    dispatch({type: "TOTAL_PRICE"})
+    dispatch({type: "TOTAL_ITEM"});
+    dispatch({type: "TOTAL_PRICE"});
   }, [state.cart])
 
   return (
