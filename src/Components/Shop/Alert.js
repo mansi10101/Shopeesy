@@ -16,19 +16,19 @@ const style = {
   p: 4,
 };
 
-export default function Alert({alert}) {
+export default function Alert({open,text}) {
 
   return (
     <div className={styles.modal} >
       <Modal
-        open={alert}
+        open={open}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
           <div style={{display: 'flex', justifyContent:"center", alignItems:"center", gap:"12px"}}>
           <div><CheckCircleIcon style={{fill : '#32CD32'}} fontSize="large"  /> </div>
-          <div> <Typography sx={{fontSize: "1.5rem"}} >Added to the Cart</Typography></div>
+          <div> <Typography sx={{fontSize: "1.5rem"}} >{text}</Typography></div>
           
           </div>
         </Box>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ReactComponent as LogoSVG } from '../../assets/logo.svg';
+import { ReactComponent as LogoSVG } from '../../assets/svg/logo.svg';
 import styles from '../../stylesheets/Navbar.module.css';
 import {
   AppBar,

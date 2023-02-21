@@ -4,11 +4,16 @@ import TopBanner from '../TopBanner';
 import { useCartContext } from '../../context/cart_context';
 import OrderCard from './OrderCard';
 import styles from '../../stylesheets/Orders.module.css';
+import SVGData from '../SVGData';
+import { ReactComponent as SVG } from '../../assets/svg/no-orders.svg';
 
 
 const Orders = () => {
   const { orders } = useCartContext();
 
+  if (orders.length === 0) {
+    return <SVGData SVG={SVG} text="No orders" />;
+  }
   return (
     <div>
       <TopBanner

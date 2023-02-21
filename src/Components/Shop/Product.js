@@ -91,7 +91,7 @@ const Product = () => {
             >
               Add to cart
             </button>
-            <Alert alert={alert} />
+            <Alert open={alert} text="Added to the Cart" />
           </div>
         </div>
       </div>

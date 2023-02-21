@@ -10,7 +10,7 @@ const TopBanner = ({ image, title, text }) => {
         style={{
           backgroundImage: `url(${image})`,
           marginTop: '100px',
-          minHeight: '50vh',
+          minHeight: '40vh',
         }}
       >
         <h1 className={styles.btext2} style={{ fontFamily: 'cursive' }}>
