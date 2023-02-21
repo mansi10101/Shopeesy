@@ -6,6 +6,8 @@ const CartContext = createContext();
 const CartProvider = ({ children }) => {
   const initialState = {
     cart: [],
+    orders: [],
+    curr_orders: [],
     total_item: "",
     total_price: "",
   };
@@ -31,6 +33,10 @@ const CartProvider = ({ children }) => {
     dispatch({ type: 'REMOVE_ITEM', payload: id });
   };
 
+  const buyItems = (currCartItems) => {
+    dispatch({type: "BUY_ITEMS", payload: {currCartItems}})
+  }
+
   useEffect(() => {
     dispatch({type: "TOTAL_ITEM"});
     dispatch({type: "TOTAL_PRICE"});
@@ -38,7 +44,7 @@ const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ ...state, addToCart, removeItem, setDecrease, setIncrease }}
+      value={{ ...state, addToCart, removeItem, setDecrease, setIncrease,buyItems }}
     >
       {children}
     </CartContext.Provider>

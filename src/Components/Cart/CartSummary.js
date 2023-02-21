@@ -1,9 +1,11 @@
 import { Divider } from '@mui/material';
 import React, { Fragment } from 'react'
-
+import { useCartContext } from '../../context/cart_context';
 import styles from '../../stylesheets/Cart.module.css';
 
-const CartSummary = ({total_price}) => {
+const CartSummary = ({total_price, currCartItems}) => {
+  const {buyItems} = useCartContext();
+
     return (
         <Fragment>
         <div className= {styles.totals}>
@@ -19,7 +21,7 @@ const CartSummary = ({total_price}) => {
             <div><h2>Order Total: </h2></div>
             <div><p>{total_price}.00</p></div>
           </div>
-          <div><button className= {styles.paybutt}>Pay Now</button></div>
+          <div><button className= {styles.paybutt} onClick={() => buyItems(currCartItems)} >Pay Now</button></div>
       </Fragment>
     )
 }

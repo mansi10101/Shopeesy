@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import TopBanner from '../TopBanner';
-import bimage from '../../assets/img/banner/b6.jpg';
+import bimage from '../../assets/img/banner/b16.jpg';
 import CartWrapper from './CartWrapper';
 
 const Cart = () => {

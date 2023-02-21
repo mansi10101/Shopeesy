@@ -5,7 +5,7 @@ import { useCartContext } from '../../context/cart_context';
 import { Divider } from '@mui/material';
 
 const CartItems = ({ id, name, img, price, quantity, cartLength }) => {
-  const { removeItem, setIncrease, setDecrease } = useCartContext();
+  const { removeItem, setIncrease, setDecrease  } = useCartContext();
 
   return (
     <Fragment>

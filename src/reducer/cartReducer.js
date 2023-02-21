@@ -125,6 +125,19 @@ const cartReducer = (state, action) => {
     };
   }
 
+  // buy items
+  if(action.type === "BUY_ITEMS"){
+    let {currCartItems} = action.payload;
+     let newarr = state.orders.concat(currCartItems)
+    return {
+      ...state,
+      cart: [],
+      orders: newarr,
+      curr_orders: currCartItems,
+    }
+  }
+
+
   return state;
 };
 

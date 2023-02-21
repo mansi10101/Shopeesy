@@ -269,6 +269,9 @@
   .counter p{
     display: none;
   }
+  .modal{
+    margin: 10px;
+  }
 }
 @media screen and (min-width: 500px) and (max-width: 690px) {
   .title h6 {

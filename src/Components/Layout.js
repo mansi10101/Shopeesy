@@ -9,6 +9,7 @@ import NewsLetter from './NewsLetter';
 import Footer from './Footer';
 import Product from './Shop/Product';
 import Cart from './Cart';
+import Orders from './Orders';
 
 const Layout = () => {
 
@@ -28,6 +29,7 @@ const Layout = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/product/:id' element={<Product />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/myorders' element={<Orders />} />
         </Routes>
         <NewsLetter />
         <Footer />
