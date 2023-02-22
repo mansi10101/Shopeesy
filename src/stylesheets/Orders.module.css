@@ -41,7 +41,7 @@
 
 
 .p_img{
-    width:300px;
+    width:220px;
     height: 100%;
 }
 .p_details{
@@ -134,13 +134,13 @@
     .cartsummary{
         width: 95vw;
     }
+    .p_img{
+      width: 150px;
+    }
   }
   @media screen and (min-width: 590px) and (max-width: 900px){
     .p_details{
         column-gap: 30px;
-    }
-    .p_img{
-      width: 350px;
     }
     .remove_button{
       padding: 12px 14px;

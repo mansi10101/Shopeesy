@@ -3,34 +3,40 @@ import styles from '../../stylesheets/Cart.module.css';
 import Quantity from '../Shop/Quantity';
 import { useCartContext } from '../../context/cart_context';
 import { Divider } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-const CartItems = ({ id, name, img, price, quantity, cartLength }) => {
-  const { removeItem, setIncrease, setDecrease  } = useCartContext();
+const CartItems = ({ id, name, img,size, price, quantity, cartLength }) => {
+  const { removeItem, setIncrease, setDecrease } = useCartContext();
 
   return (
     <Fragment>
       <div className={styles.product}>
-        <div className={styles.p_img}>
-          <img src={img} alt='' />
-        </div>
-        <div className={styles.p_details}>
-          <div className={styles.item}>
-            <h2>{name}</h2>
+        <Link to={`/product/${id} `}>
+          <div className={styles.p_img}>
+            <img src={img} alt='' />
           </div>
+        </Link>
+        <div className={styles.p_details}>
+          <Link to={`/product/${id} `}>
+            <div className={styles.item}>
+              <h2>{name}</h2>
+              <h3>Size: {size}</h3>
+            </div>
+          </Link>
           <div className={styles.item}>
             <h2>${price}</h2>
           </div>
           <div className={styles.item}>
             <Quantity
               quantity={quantity}
-              setIncrease={() => setIncrease(id)}
-              setDecrease={() => setDecrease(id)}
+              setIncrease={() => setIncrease(id,size)}
+              setDecrease={() => setDecrease(id,size)}
             />
           </div>
           <div className={styles.item}>
             <button
               className={styles.remove_button}
-              onClick={() => removeItem(id)}
+              onClick={() => removeItem(id,size)}
             >
               Remove
             </button>

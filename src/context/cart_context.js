@@ -14,23 +14,23 @@ const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   //add item to cart
-  const addToCart = (quantity, item) => {
-    dispatch({ type: 'ADD_TO_CART', payload: { quantity, item } });
+  const addToCart = (quantity, item,size) => {
+    dispatch({ type: 'ADD_TO_CART', payload: { quantity, item,size } });
   };
 
   //increase decrease quantity
 
-  const setDecrease = (id) => {
-    dispatch({ type: 'SET_DECREMENT', payload: id });
+  const setDecrease = (id,size) => {
+    dispatch({ type: 'SET_DECREMENT', payload: {id,size} });
   };
 
-  const setIncrease = (id) => {
-    dispatch({ type: 'SET_INCREMENT', payload: id });
+  const setIncrease = (id,size) => {
+    dispatch({ type: 'SET_INCREMENT', payload: {id,size}});
   };
 
   //remove item from cart
-  const removeItem = (id) => {
-    dispatch({ type: 'REMOVE_ITEM', payload: id });
+  const removeItem = (id,size) => {
+    dispatch({ type: 'REMOVE_ITEM', payload: {id,size}});
   };
 
   const buyItems = (currCartItems) => {

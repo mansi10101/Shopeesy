@@ -8,6 +8,10 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import FindReplaceIcon from '@mui/icons-material/FindReplace';
 import Quantity from './Quantity';
 import { useCartContext } from '../../context/cart_context';
+import MenuItem from '@mui/material/MenuItem';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 import Alert from './Alert';
 
 const Product = () => {
@@ -16,16 +20,17 @@ const Product = () => {
   const [item, setItem] = React.useState({});
   const [quantity, setQuantity] = React.useState(1);
   const [alert, setAlert] = React.useState(false);
+  const [size, setSize] = React.useState('');
+  const [error, setError] = React.useState(false);
 
   const pid = (p_id) => {
     const product = AllProducts.filter((i) => i.id === p_id);
     setItem(product[0]);
   };
-  React.useEffect(() => {
-    const id = window.location.pathname.split('/');
-    pid(id[2]);
-    window.scrollTo(0, 0);
-  }, []);
+
+  const handleChange = (event) => {
+    setSize(event.target.value);
+  };
 
   const setDecrease = () => {
     quantity > 1 ? setQuantity(quantity - 1) : setQuantity(1);
@@ -35,13 +40,22 @@ const Product = () => {
     quantity < 10 ? setQuantity(quantity + 1) : setQuantity(10);
   };
   const handleAddToCartBtn = () => {
-    addToCart(quantity, item);
-    setAlert(true);
-    setTimeout(() => {
-      setAlert(false);
-    }, 1500);
+    if (size === '') {
+      setError(true);
+    } else {
+      addToCart(quantity, item, size);
+      setAlert(true);
+      setTimeout(() => {
+        setAlert(false);
+      }, 1500);
+    }
   };
 
+  React.useEffect(() => {
+    const id = window.location.pathname.split('/');
+    pid(id[2]);
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Fragment>
       <div className={styles.app}>
@@ -79,19 +93,57 @@ const Product = () => {
                 <p>Fast Delivery</p>
               </div>
             </div>
+            <h3
+              style={{
+                display: 'flex',
+                alignItems: 'baseline',
+                fontWeight: '500',
+                fontSize: '1.5rem',
+              }}
+            >
+              Size :
+              <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <Select
+                  value={size}
+                  onChange={handleChange}
+                  displayEmpty
+                  inputProps={{ 'aria-label': 'Without label' }}
+                >
+                  <MenuItem value=''>
+                    <em>Select</em>
+                  </MenuItem>
+                  <MenuItem value={'S'}>S</MenuItem>
+                  <MenuItem value={'M'}>M</MenuItem>
+                  <MenuItem value={'L'}>L</MenuItem>
+                  <MenuItem value={'XL'}>XL</MenuItem>
+                </Select>
+                {error && size === '' && (
+                  <h3
+                    style={{
+                      fontSize: '20px',
+                      fontWeight: '400',
+                      color: 'red',
+                    }}
+                  >
+                    Please select the size
+                  </h3>
+                )}
+              </FormControl>
+            </h3>
 
             <Quantity
               quantity={quantity}
               setIncrease={setIncrease}
               setDecrease={setDecrease}
             />
+
             <button
               className={styles.addtocartbtn}
               onClick={handleAddToCartBtn}
             >
               Add to cart
             </button>
-            <Alert open={alert} text="Added to the Cart" />
+            <Alert open={alert} text='Added to the Cart' />
           </div>
         </div>
       </div>

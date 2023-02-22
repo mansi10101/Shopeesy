@@ -1,14 +1,14 @@
 const cartReducer = (state, action) => {
   if (action.type === 'ADD_TO_CART') {
-    let { quantity, item } = action.payload;
+    let { quantity, item,size } = action.payload;
     // console.log(item)
 
     //tackling exisiting product
-    let exisitingProduct = state.cart.find((curItem) => curItem.id === item.id);
+    let exisitingProduct = state.cart.find((curItem) => curItem.id === item.id && curItem.size === size);
 
     if (exisitingProduct) {
       let updatedProduct = state.cart.map((curElem) => {
-        if (curElem.id === item.id) {
+        if (curElem.id === item.id  && curElem.size === size ) {
           let newquantity = curElem.quantity + quantity;
 
           if (newquantity > 10) {
@@ -18,8 +18,11 @@ const cartReducer = (state, action) => {
             ...curElem,
             quantity: newquantity,
           };
-        } else {
-          return curElem;
+        }
+        else{
+          return {
+            curElem,
+          }
         }
       });
       return {
@@ -27,12 +30,14 @@ const cartReducer = (state, action) => {
         cart: updatedProduct,
       };
     } else {
+
       let cartProduct = {
         id: item.id,
         name: item.name,
         quantity,
         img: item.img,
         price: item.price,
+        size,
       };
       return {
         ...state,
@@ -44,8 +49,9 @@ const cartReducer = (state, action) => {
   // decrese quanitity
 
   if (action.type === 'SET_DECREMENT') {
+    let{id,size} = action.payload;
     let updatedProduct = state.cart.map((curElem) => {
-      if (curElem.id === action.payload) {
+      if (curElem.id === id && curElem.size === size) {
         let decQuantity = curElem.quantity - 1;
         if (decQuantity <= 1) {
           decQuantity = 1;
@@ -67,8 +73,9 @@ const cartReducer = (state, action) => {
   //increase quantity
 
   if (action.type === 'SET_INCREMENT') {
+    let{id,size} = action.payload;
     let updatedProduct = state.cart.map((curElem) => {
-      if (curElem.id === action.payload) {
+      if (curElem.id === id && curElem.size === size) {
         let IncQuantity = curElem.quantity + 1;
         if (IncQuantity >= 10) {
           IncQuantity = 10;
@@ -89,8 +96,9 @@ const cartReducer = (state, action) => {
 
   //remove item
   if (action.type === 'REMOVE_ITEM') {
+    let{id,size} = action.payload;
     let updateCart = state.cart.filter(
-      (curElem) => curElem.id !== action.payload
+      (curElem) => curElem.id !== id || curElem.size !== size
     );
     return {
       ...state,

@@ -113,13 +113,14 @@
     background-color: #8394a9;
     transform: scale(0.9);
 }
-  @media screen and (min-width: 250px) and (max-width: 590px) {
+  @media screen and (min-width: 250px) and (max-width: 630px) {
     .remove_button{
         padding: 8px 12px;
     }
     .p_details{
         display: grid;
         gap:5px;
+        padding-right: 0;
     }
     .p_details h2{
         font-size: 1.1rem;
@@ -130,8 +131,9 @@
     .cartsummary{
         width: 95vw;
     }
+    .p_img{width:150px;}
   }
-  @media screen and (min-width: 590px) and (max-width: 900px){
+  @media screen and (min-width: 631px) and (max-width: 900px){
     .p_details{
         column-gap: 30px;
     }
@@ -140,11 +142,13 @@
     .p_details{
         columns: 3;
         column-gap: 10px;
+        row-gap: 10px
     }
   }
   @media screen and (min-width: 950px) and (max-width: 1300px){
     .p_details{
         column-gap: 30px;
+        row-gap: 10px
     }
   }
 

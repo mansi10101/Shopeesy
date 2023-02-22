@@ -7,7 +7,7 @@ const SingleFeature = ({image,text,colour}) => {
             <li className={styles.cards_item}>
             <div className={styles.card}>
               <div className={styles.card_image}>
-                <img src={image} />
+                <img src={image} alt=""/>
               </div>
               <div className={styles.card_content}>
                 <button className={styles.btn} style={{background:`${colour}`}}>{text}</button>
