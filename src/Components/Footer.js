@@ -15,16 +15,16 @@ const Footer = () => {
               <h4>company</h4>
               <ul>
                 <li>
-                  <a href='#'>about us</a>
+                  <p >about us</p>
                 </li>
                 <li>
-                  <a href='#'>our services</a>
+                  <p >our services</p>
                 </li>
                 <li>
-                  <a href='#'>privacy policy</a>
+                  <p >privacy policy</p>
                 </li>
                 <li>
-                  <a href='#'>affiliate program</a>
+                  <p >affiliate program</p>
                 </li>
               </ul>
             </div>
@@ -32,19 +32,19 @@ const Footer = () => {
               <h4>get help</h4>
               <ul>
                 <li>
-                  <a href='#'>FAQ</a>
+                  <p >FAQ</p>
                 </li>
                 <li>
-                  <a href='#'>shipping</a>
+                  <p >shipping</p>
                 </li>
                 <li>
-                  <a href='#'>returns</a>
+                  <p >returns</p>
                 </li>
                 <li>
-                  <a href='#'>order status</a>
+                  <p>order status</p>
                 </li>
                 <li>
-                  <a href='#'>payment options</a>
+                  <p >payment options</p>
                 </li>
               </ul>
             </div>
@@ -52,34 +52,34 @@ const Footer = () => {
               <h4>online shop</h4>
               <ul>
                 <li>
-                  <a href='#'>watch</a>
+                  <p >watch</p>
                 </li>
                 <li>
-                  <a href='#'>bag</a>
+                  <p >bag</p>
                 </li>
                 <li>
-                  <a href='#'>shoes</a>
+                  <p >shoes</p>
                 </li>
                 <li>
-                  <a href='#'>dress</a>
+                  <p >dress</p>
                 </li>
               </ul>
             </div>
             <div className={styles.footer_col}>
               <h4>follow us</h4>
               <div className={styles.social_links}>
-                <a href='#'>
+                <p >
                   <FacebookIcon fontSize='large'/>
-                </a>
-                <a href='#'>
+                </p>
+                <p >
                  <TwitterIcon fontSize='large'/>
-                </a>
-                <a href='#'>
+                </p>
+                <p >
                   <InstagramIcon fontSize='large'/>
-                </a>
-                <a href='#'>
+                </p>
+                <p >
                   <LinkedInIcon fontSize='large'/>
-                </a>
+                </p>
               </div>
             </div>
           </div>

@@ -17,13 +17,13 @@ const HeroBanner = () => {
         <p className={styles.httext3}>
           Save more with Coupons and upto 70% off!
         </p>
-        <a
-          href='#'
+        <button
+          href=''
           className={styles.htbutton}
           style={{ backgroundColor: '#f14ebd' }}
         >
           SHOP NOW
-        </a>
+        </button>
       </div>
     </div>
   );

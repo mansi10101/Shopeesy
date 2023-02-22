@@ -9,7 +9,6 @@ import FindReplaceIcon from '@mui/icons-material/FindReplace';
 import Quantity from './Quantity';
 import { useCartContext } from '../../context/cart_context';
 import MenuItem from '@mui/material/MenuItem';
-import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Alert from './Alert';

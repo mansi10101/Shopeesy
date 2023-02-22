@@ -36,7 +36,7 @@
   font-weight: bolder;
   letter-spacing: 3px;
 }
-a.htbutton{
+.htbutton{
     display:flex ;
     padding:1rem 1rem;
     margin:0 0.5rem 0.5rem 0;
@@ -53,7 +53,7 @@ a.htbutton{
     transition: all 0.2s;
     width:fit-content;
     }
-  a.htbutton:hover{
+  .htbutton:hover{
     border-color: black;
   }
 
@@ -208,7 +208,7 @@ a.htbutton{
       font-size: 0.4rem;
       letter-spacing: 1px;
     }
-    a.htbutton{
+    .htbutton{
       display: block;
       font-size: 0.5rem;
     }
@@ -249,7 +249,7 @@ a.htbutton{
       font-size: 0.7rem;
       letter-spacing: 1px;
     }
-    a.htbutton{
+    .htbutton{
       font-size: 0.8rem;
     }
     .btext2{
@@ -287,7 +287,7 @@ a.htbutton{
       font-size: 0.9rem;
       letter-spacing: 2px;
     }
-    a.htbutton{
+    htbutton{
       font-size: 1rem;
     }
     .banner_box{
