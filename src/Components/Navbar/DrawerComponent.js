@@ -48,7 +48,7 @@ function DrawerComponent() {
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
               <NavLink className={styles.navlinks} to='/myorders'>
-                Your Orders
+                Orders
               </NavLink>
             </ListItemText>
           </ListItem>

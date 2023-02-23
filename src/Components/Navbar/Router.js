@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Tabs, Tab, Box } from '@mui/material';
 import { ThemeProvider, useMediaQuery, useTheme } from '@mui/material';
+import styles from '../../stylesheets/Navbar.module.css';
 
 const Router = ({ show }) => {
   var theme = useTheme();
-  const [value, setValue] = React.useState(0);
   const isMobile = useMediaQuery(theme.breakpoints.up('md'));
   const style = {
     color: 'black',
@@ -13,21 +13,13 @@ const Router = ({ show }) => {
     fontWeight: 'bold',
     p: isMobile ? 2 : 5,
     margin: '0px 15px',
-    transition: 'background 1s',
-    '&:hover': {
-      backgroundColor: 'powderblue',
-    },
     fontFamily: 'cursive',
     lineHeight: 'normal',
   };
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   return (
     <ThemeProvider theme={theme}>
-      {window.scrollTo(0,0)}
+      {window.scrollTo(0, 0)}
       <Box
         sx={{
           width: '100%',
@@ -36,12 +28,47 @@ const Router = ({ show }) => {
           backgroundColor: show ? 'white' : '#E3E6F3',
         }}
       >
-        <Tabs value={value} onChange={handleChange} centered>
-          <Tab sx={style} label='Home' to='/' component={Link} />
-          <Tab sx={style} label='Shop' to='/shop' component={Link} />
-          <Tab sx={style} label='My Orders' to='/myorders' component={Link} />
-          <Tab sx={style} label='about' to='/about' component={Link} />
-          <Tab sx={style} label='conatct' to='/contact' component={Link} />
+        <Tabs centered>
+          <NavLink
+            to='/'
+            className={({ isActive }) =>
+              isActive ? styles.active : styles.inactive
+            }
+          >
+            <Tab sx={style} label='Home' />
+          </NavLink>
+          <NavLink
+            to='/shop'
+            className={({ isActive }) =>
+              isActive ? styles.active : styles.inactive
+            }
+          >
+            <Tab sx={style} label='Shop' />
+          </NavLink>
+          <NavLink
+            to='/myorders'
+            className={({ isActive }) =>
+              isActive ? styles.active : styles.inactive
+            }
+          >
+            <Tab sx={style} label='Orders' />
+          </NavLink>
+          <NavLink
+            to='/about'
+            className={({ isActive }) =>
+              isActive ? styles.active : styles.inactive
+            }
+          >
+            <Tab sx={style} label='about' />
+          </NavLink>
+          <NavLink
+            to='/contact'
+            className={({ isActive }) =>
+              isActive ? styles.active : styles.inactive
+            }
+          >
+            <Tab sx={style} label='contact' />
+          </NavLink>
         </Tabs>
       </Box>
     </ThemeProvider>

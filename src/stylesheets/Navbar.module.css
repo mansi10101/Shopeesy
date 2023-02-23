@@ -1,49 +1,74 @@
-.nav{
-    display:"flex";
+.nav {
+    display: "flex";
     width: 100%;
     position: fixed;
-      top:0px;
-      left:0px;
-      z-index:10;
-      overflow:hidden;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    overflow: hidden;
 }
 
-.navcontent{
-    
+.active {
+    border-bottom: 3px solid #1c375d;
+}
+
+.inactive:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #1c375d;
+    width:0;
+    transition: 0.5s;
+}
+
+.inactive:hover{
+    transition: 0.5s;
+    background-color: transparent;
+}
+.inactive:hover:before {
+    width: 20%;
+}
+
+
+
+.navcontent {
     justify-content: space-between;
     width: 100%;
 }
-.navlinks{
+
+.navlinks {
     float: center;
     text-align: center;
-  display: block;
-  color: black;
-  font-size: 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 14px 16px;
-  text-decoration: none;
-  margin: 0 50px 0 50px;
+    display: block;
+    color: black;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 0 50px 0 50px;
 }
 
-@media screen  and (min-width: 320px) and (max-width: 480px) {
-    .navlinks{
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .navlinks {
         font-size: 1rem;
         padding: 5px 10px;
     }
 }
-@media screen  and (min-width: 500px) and (max-width: 900px) {
-    .navlinks{
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+    .navlinks {
         font-size: 1.2rem;
         padding: 5px 10px;
     }
 }
 
-.router{
+.router {
     display: flex;
     align-items: center;
     /* width:100vh; */
 }
-.tabtext{
+
+.tabtext {
     font-size: 50px;
     font-weight: bold;
     padding: 5px;
