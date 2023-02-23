@@ -37,6 +37,36 @@ const CartProvider = ({ children }) => {
     dispatch({type: "BUY_ITEMS", payload: {currCartItems}})
   }
 
+  
+const ani_container = {
+  animate: {
+    transition: { staggerChildren: 0.1 },
+  },
+};
+const ani_header = {
+  initial: { y: -20, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
+};
+
+const ani_content = {
+  initial: { y: -20, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
+};
+
   useEffect(() => {
     dispatch({type: "TOTAL_ITEM"});
     dispatch({type: "TOTAL_PRICE"});
@@ -44,7 +74,7 @@ const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ ...state, addToCart, removeItem, setDecrease, setIncrease,buyItems }}
+      value={{ ...state, addToCart, removeItem, setDecrease, setIncrease,buyItems,ani_header,ani_container,ani_content }}
     >
       {children}
     </CartContext.Provider>

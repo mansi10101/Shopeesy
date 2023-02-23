@@ -1,11 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../../stylesheets/Shop.module.css';
 import Rating from '@mui/material/Rating';
+import { motion } from 'framer-motion';
 
 const ShopCard = ({ product }) => {
   return (
-    <Fragment>
+    <motion.div
+      exit={{ opacity: 0 }}
+      animate={{y:20 }}
+      transition={{ duration: 3}}>
       <Link to={ `/product/${product.id} `}>
     <div className={styles.product}>
       <div className={styles.product_thumb}>
@@ -27,7 +31,7 @@ const ShopCard = ({ product }) => {
       </div>
     </div>
     </Link>
-    </Fragment>
+    </motion.div>
   );
 };
 

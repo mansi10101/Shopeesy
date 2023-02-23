@@ -15,6 +15,7 @@ const Router = ({ show }) => {
     margin: '0px 15px',
     fontFamily: 'cursive',
     lineHeight: 'normal',
+    backgroundColor: "transparent"
   };
 
   return (

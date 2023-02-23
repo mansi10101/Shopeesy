@@ -1,15 +1,17 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styles from '../../stylesheets/Home.module.css';
 import img1 from '../../assets/img/banner/b17.jpg';
 import img2 from '../../assets/img/banner/b10.jpg';
 import img3 from '../../assets/img/banner/b7.jpg';
 import img4 from '../../assets/img/banner/b4.jpg';
 import img5 from '../../assets/img/banner/b18.jpg';
-
+import { useCartContext } from '../../context/cart_context';
+import { motion } from 'framer-motion';
 
 const SMBanner = () => {
+  const {ani_content} = useCartContext();
   return (
-    <Fragment>
+    <motion.div variants={ani_content}>
       <section id={styles.smbanner}>
         <div
           className={styles.banner_box}
@@ -53,7 +55,7 @@ const SMBanner = () => {
           <h2>Winter Collection - 50% off</h2>
         </div>
       </section>
-    </Fragment>
+    </motion.div>
   );
 };
 

@@ -7,10 +7,13 @@ import f3 from '../../assets/img/features/f3.png';
 import f4 from '../../assets/img/features/f4.png';
 import f5 from '../../assets/img/features/f5.png';
 import f6 from '../../assets/img/features/f6.png';
+import { useCartContext } from '../../context/cart_context';
+import { motion } from 'framer-motion';
 
 const Featured = () => {
+  const {ani_content} = useCartContext();
   return (
-    <div>
+    <motion.div variants={ani_content}>
       <div className={styles.main}>
         <ul className={styles.cards}>
           <SingleFeature image={f1} text='Free Shipping' colour='#FFC0CB' />
@@ -21,7 +24,7 @@ const Featured = () => {
           <SingleFeature image={f6} text='24/7 Support' colour='#F0E68C' />
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

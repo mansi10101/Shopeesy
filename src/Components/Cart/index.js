@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useCartContext } from '../../context/cart_context';
 import CartItems from './CartItems';
 import styles from '../../stylesheets/Cart.module.css';
@@ -7,10 +7,14 @@ import SVGData from '../SVGData';
 import TopBanner from '../TopBanner';
 import bimage from '../../assets/img/banner/b16.jpg';
 import { ReactComponent as SVG } from '../../assets/svg/empty-cart.svg';
+import { motion } from 'framer-motion';
 
 const Cart = () => {
-  const { cart, total_price } = useCartContext();
+  const { cart, total_price,ani_conatiner,ani_content } = useCartContext();
   const [confirm, setConfirm] = React.useState(false)
+  React.useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   const Confirmation = () => {
     setConfirm(true);
@@ -23,25 +27,36 @@ const Cart = () => {
     return <SVGData SVG={SVG} text='Cart is empty' />;
   }
   return (
-    <Fragment>
-      <TopBanner
-        image={bimage}
-        title='cart'
-        text='Lets make each other smile..'
-      />
-    <div className={styles.container}>
-      <div className={styles.Cart_box}>
-        {cart.map((curElem) => {
-          return (
-            <CartItems key={curElem.id} {...curElem} cartLength={cart.length} />
-          );
-        })}
-      </div>
-      <div className={styles.cartsummary}>
-        <CartSummary openModalConf={confirm} handleConf={Confirmation} currCartItems={cart} total_price={total_price} />
-      </div>
-    </div>
-    </Fragment>
+    <motion.section exit={{ opacity: 0 }}>
+      <motion.div variants={ani_conatiner} animate='animate' initial='initial'>
+        <TopBanner
+          image={bimage}
+          title='cart'
+          text='Lets make each other smile..'
+        />
+        <motion.div variants={ani_content} className={styles.container}>
+          <div className={styles.Cart_box}>
+            {cart.map((curElem) => {
+              return (
+                <CartItems
+                  key={curElem.id}
+                  {...curElem}
+                  cartLength={cart.length}
+                />
+              );
+            })}
+          </div>
+          <div className={styles.cartsummary}>
+            <CartSummary
+              openModalConf={confirm}
+              handleConf={Confirmation}
+              currCartItems={cart}
+              total_price={total_price}
+            />
+          </div>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 

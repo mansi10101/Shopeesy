@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { AllProducts } from '../../utils/constants';
 import Rating from '@mui/material/Rating';
 import styles from '../../stylesheets/Shop.module.css';
@@ -12,9 +12,22 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Alert from './Alert';
+import { motion } from 'framer-motion';
+
+const ani_img = {
+  initial: { x: -20, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
+};
 
 const Product = () => {
-  const { addToCart } = useCartContext();
+  const { addToCart,ani_container} = useCartContext();
 
   const [item, setItem] = React.useState({});
   const [quantity, setQuantity] = React.useState(1);
@@ -53,15 +66,15 @@ const Product = () => {
   React.useEffect(() => {
     const id = window.location.pathname.split('/');
     pid(id[2]);
-    window.scrollTo(0, 0);
+    window.scroll(0,0)
   }, []);
   return (
-    <Fragment>
-      <div className={styles.app}>
+    <motion.section exit={{ opacity: 0 }}>
+      <motion.div variants={ani_container} animate="animate" initial="initial" className={styles.app}>
         <div className={styles.details}>
-          <div className={styles.big_img}>
+          <motion.div variants={ani_img}  className={styles.big_img}>
             <img src={item.img} alt='' />
-          </div>
+          </motion.div>
 
           <div className={styles.box}>
             <div className={styles.row}>
@@ -145,9 +158,9 @@ const Product = () => {
             <Alert open={alert} text='Added to the Cart' />
           </div>
         </div>
-      </div>
+      </motion.div>
       <CardsWrapper h1='Featured Products' products={Feature} />
-    </Fragment>
+    </motion.section>
   );
 };
 

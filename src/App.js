@@ -1,12 +1,11 @@
 import './App.css';
 import Layout from './Components/Layout';
-
+import { AnimatePresence } from 'framer-motion';
 function App() {
   return (
-    <div>
-        <Layout/>
-    </div>
-    
+    <AnimatePresence>
+      <Layout />
+    </AnimatePresence>
   );
 }
 

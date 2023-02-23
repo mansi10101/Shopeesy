@@ -1,22 +1,23 @@
 import React from 'react';
 import image from '../../assets/img/hero4.png';
+import { useCartContext } from '../../context/cart_context';
 import styles from '../../stylesheets/Home.module.css';
-
+import { motion } from 'framer-motion';
 
 const HeroBanner = () => {
+  const {ani_header,ani_content} = useCartContext(); 
   return (
-    <div className={styles.heroImage}>
+    <motion.div variants={ani_header} className={styles.heroImage}>
       <img className={styles.heroImage} src={image} alt='hero' />
-      <div className={styles.heroText}>
-        <p className={styles.httext1}>Trade-in Offer</p>
-        <p className={styles.httext2}> Super value deals</p>
-        <p className={styles.httext2} style={{ color: 'green' }}>
-  
+      <motion.div variants={ani_content} className={styles.heroText}>
+        <motion.p variants={ani_content} className={styles.httext1}>Trade-in Offer</motion.p>
+        <motion.p variants={ani_content} className={styles.httext2}> Super value deals</motion.p>
+        <motion.p variants={ani_content} className={styles.httext2} style={{ color: 'green' }}>
           On all products
-        </p>
-        <p className={styles.httext3}>
+        </motion.p>
+        <motion.p variants={ani_content} className={styles.httext3}>
           Save more with Coupons and upto 70% off!
-        </p>
+        </motion.p>
         <button
           href=''
           className={styles.htbutton}
@@ -24,8 +25,8 @@ const HeroBanner = () => {
         >
           SHOP NOW
         </button>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

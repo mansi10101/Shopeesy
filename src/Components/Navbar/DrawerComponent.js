@@ -19,43 +19,36 @@ function DrawerComponent() {
         <List>
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-              <NavLink className={styles.navlinks} to='/'>
-                Home
+              <NavLink to='/'>
+                <p className={styles.navlinks}>Home</p>
               </NavLink>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-              <NavLink className={styles.navlinks} to='/shop'>
-                Shop
+              <NavLink  to='/shop'>
+                <p className={styles.navlinks}>Shop</p>
               </NavLink>
             </ListItemText>
           </ListItem>{' '}
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-              <NavLink className={styles.navlinks} to='/about'>
-                About
+              <NavLink to='/myorders'>
+                <p className={styles.navlinks}>Orders</p>
               </NavLink>
             </ListItemText>
           </ListItem>{' '}
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-              <NavLink className={styles.navlinks} to='/contact'>
-                Contact
+              <NavLink  to='/about'>
+                <p className={styles.navlinks}>About</p>
               </NavLink>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-              <NavLink className={styles.navlinks} to='/myorders'>
-                Orders
-              </NavLink>
-            </ListItemText>
-          </ListItem>
-          <ListItem onClick={() => setOpen(false)}>
-            <ListItemText>
-              <NavLink className={styles.navlinks} to='/trackorder'>
-                Track Order
+              <NavLink  to='/contact'>
+                <p className={styles.navlinks}>Contact</p>
               </NavLink>
             </ListItemText>
           </ListItem>

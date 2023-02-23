@@ -1,10 +1,13 @@
 import React, { Fragment } from 'react';
+import { useCartContext } from '../context/cart_context';
 import styles from '../stylesheets/Shop.module.css';
+import { motion } from 'framer-motion';
 
 const TopBanner = ({ image, title, text }) => {
+  const {ani_header} = useCartContext();
   return (
     <Fragment>
-      <section
+      <motion.div variants={ani_header}
         id={styles.mbanner}
         className={styles.section_m1}
         style={{
@@ -19,7 +22,7 @@ const TopBanner = ({ image, title, text }) => {
           {title}
         </h1>
         <h2 className={styles.btext1}> {text} </h2>
-      </section>
+      </motion.div>
     </Fragment>
   );
 };
