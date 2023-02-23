@@ -19,7 +19,7 @@ const style = {
 };
 
 export default function Alert({open,text}) {
- const {ani_container,ani_content} = useCartContext();
+ const {ani_container} = useCartContext();
   return (
     <motion.section exit={{ opacity: 0 }}>
       <div className={styles.modal}>

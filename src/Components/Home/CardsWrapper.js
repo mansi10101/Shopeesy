@@ -1,7 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styles from '../../stylesheets/Card.module.css';
 import Card from './Card';
 import Carousel from 'react-elastic-carousel';
+import { motion } from 'framer-motion';
+import { useCartContext } from '../../context/cart_context';
 
 const breakPonts = [
   { width: 1, itemsToShow: 1 },
@@ -10,15 +12,15 @@ const breakPonts = [
   { width: 1200, itemsToShow: 5 },
 ];
 
-const CardsWrapper = ({ f1,h1, h2, products }) => {
+const CardsWrapper = ({ h1, h2, products }) => {
+  const {ani_container,ani_content} = useCartContext();
   return (
-    <Fragment>
-      <section>
-        <div className={styles.row}>
-          <div className={styles.heading}>
+      <motion.section exit={{opacity:0}}>
+        <motion.div variants={ani_container} animate="animate" initial="initial" className={styles.row}>
+          <motion.div variants={ani_content} className={styles.heading}>
             <h2 className={styles.heading1}> {h1} </h2>
             <p className={styles.heading2}>{h2}</p>
-          </div>
+          </motion.div>
           <br />
           <Carousel breakPoints={breakPonts}>
             {products.map((product) => {
@@ -30,9 +32,8 @@ const CardsWrapper = ({ f1,h1, h2, products }) => {
               );
             })}
           </Carousel>
-        </div>
-      </section>
-    </Fragment>
+        </motion.div>
+      </motion.section>
   );
 };
 

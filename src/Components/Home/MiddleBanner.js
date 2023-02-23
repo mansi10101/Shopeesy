@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import image from '../../assets/img/banner/b2.jpg'
 import styles from '../../stylesheets/Home.module.css'
 import { motion } from 'framer-motion'
