@@ -66,6 +66,17 @@ const ani_content = {
     },
   },
 };
+const ani_img = {
+  initial: { x: -20, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
+};
 
   useEffect(() => {
     dispatch({type: "TOTAL_ITEM"});
@@ -74,7 +85,7 @@ const ani_content = {
 
   return (
     <CartContext.Provider
-      value={{ ...state, addToCart, removeItem, setDecrease, setIncrease,buyItems,ani_header,ani_container,ani_content }}
+      value={{ ...state, addToCart, removeItem, setDecrease, setIncrease,buyItems,ani_header,ani_container,ani_content,ani_img }}
     >
       {children}
     </CartContext.Provider>

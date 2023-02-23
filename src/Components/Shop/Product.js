@@ -14,20 +14,10 @@ import Select from '@mui/material/Select';
 import Alert from './Alert';
 import { motion } from 'framer-motion';
 
-const ani_img = {
-  initial: { x: -20, opacity: 0 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.7,
-      ease: [0.6, -0.05, 0.01, 0.99],
-    },
-  },
-};
+
 
 const Product = () => {
-  const { addToCart,ani_container} = useCartContext();
+  const { addToCart,ani_container,ani_img} = useCartContext();
 
   const [item, setItem] = React.useState({});
   const [quantity, setQuantity] = React.useState(1);
@@ -70,9 +60,14 @@ const Product = () => {
   }, []);
   return (
     <motion.section exit={{ opacity: 0 }}>
-      <motion.div variants={ani_container} animate="animate" initial="initial" className={styles.app}>
+      <motion.div
+        variants={ani_container}
+        animate='animate'
+        initial='initial'
+        className={styles.app}
+      >
         <div className={styles.details}>
-          <motion.div variants={ani_img}  className={styles.big_img}>
+          <motion.div variants={ani_img} className={styles.big_img}>
             <img src={item.img} alt='' />
           </motion.div>
 
@@ -116,18 +111,27 @@ const Product = () => {
               Size :
               <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
+                  sx={{ fontWeight: 545, fontSize: 22 }}
                   value={size}
                   onChange={handleChange}
                   displayEmpty
                   inputProps={{ 'aria-label': 'Without label' }}
                 >
-                  <MenuItem value=''>
+                  <MenuItem sx={{ fontWeight: 545, fontSize: 18 }} value=''>
                     <em>Select</em>
                   </MenuItem>
-                  <MenuItem value={'S'}>S</MenuItem>
-                  <MenuItem value={'M'}>M</MenuItem>
-                  <MenuItem value={'L'}>L</MenuItem>
-                  <MenuItem value={'XL'}>XL</MenuItem>
+                  <MenuItem sx={{ fontWeight: 545, fontSize: 18 }} value={'S'}>
+                    S
+                  </MenuItem>
+                  <MenuItem sx={{ fontWeight: 545, fontSize: 18 }} value={'M'}>
+                    M
+                  </MenuItem>
+                  <MenuItem sx={{ fontWeight: 545, fontSize: 18 }} value={'L'}>
+                    L
+                  </MenuItem>
+                  <MenuItem sx={{ fontWeight: 545, fontSize: 18 }} value={'XL'}>
+                    XL
+                  </MenuItem>
                 </Select>
                 {error && size === '' && (
                   <h3
