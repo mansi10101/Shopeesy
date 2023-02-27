@@ -1,7 +1,7 @@
 
 /* The hero image */
 .heroImage {
-  margin-top: 3rem;
+  margin-top: 2vh;
   /* height: ; */
   position: center;
   size: cover;
@@ -212,9 +212,9 @@
       display: block;
       font-size: 0.5rem;
     }
-    .heroImage {
+    /* .heroImage {
       margin-top: 2.7rem;
-    }
+    } */
     #mbanner h2{
       font-size: 1rem;
     }
@@ -287,7 +287,7 @@
       font-size: 0.9rem;
       letter-spacing: 2px;
     }
-    htbutton{
+    .htbutton{
       font-size: 1rem;
     }
     .banner_box{

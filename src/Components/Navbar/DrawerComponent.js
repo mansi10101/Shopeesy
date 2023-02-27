@@ -55,7 +55,7 @@ function DrawerComponent() {
         </List>
       </Drawer>
       <IconButton onClick={() => setOpen(!open)}>
-        <MenuIcon sx={{ color: 'secondary.dark', fontSize: '2.7rem' }} />
+        <MenuIcon sx={{ color: 'secondary.dark' }} />
       </IconButton>
     </div>
   );

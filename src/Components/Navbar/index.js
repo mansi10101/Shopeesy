@@ -20,6 +20,8 @@ import { useCartContext } from '../../context/cart_context';
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
   const {total_item} = useCartContext();
+    const isMobile = useMediaQuery('(max-width:800px)');
+    const mediaq = useMediaQuery('(min-width:800px)');
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -46,9 +48,11 @@ const Navbar = () => {
     zIndex: 1,
     transitionTimingFunction: 'ease-in',
     transition: 'all 0.3s',
+    maxHeight: '10vh',
   };
   theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+
   return (
     <ThemeProvider theme={theme}>
       <div className={styles.nav}>
@@ -56,15 +60,15 @@ const Navbar = () => {
           <CssBaseline />
           <Toolbar className={styles.navcontent}>
             <div>
-              <LogoSVG width='200px'/>
+              <LogoSVG width='100px'/>
             </div>
             <div className={styles.router}>
-              <div>{!isMobile && <Router show={show} />}</div>
+              <div>{!isMobile && <Router show={show} mediaq={mediaq} />}</div>
               <div>
                 <Link to={"/cart"} >
                 <Badge badgeContent={total_item} color="primary">
                 <ShoppingCartIcon
-                  sx={{ color: 'secondary.dark', fontSize: '2.5rem' }}
+                  sx={{ color: 'secondary.dark', fontDecoration:"none" }}
                 />
                  </Badge>
                 </Link>

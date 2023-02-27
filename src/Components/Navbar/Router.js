@@ -4,18 +4,21 @@ import { Tabs, Tab, Box } from '@mui/material';
 import { ThemeProvider, useMediaQuery, useTheme } from '@mui/material';
 import styles from '../../stylesheets/Navbar.module.css';
 
-const Router = ({ show }) => {
+const Router = ({ show, mediaq }) => {
   var theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.up('md'));
   const style = {
     color: 'black',
-    fontSize: isMobile ? 21 : 22,
+    fontSize: mediaq ? 10 : 22,
     fontWeight: 'bold',
-    p: isMobile ? 2 : 5,
-    margin: '0px 15px',
     fontFamily: 'cursive',
     lineHeight: 'normal',
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
+    minWidth:"70px",
+    maxWidth:0,
+    padding:0,
+    margin:0,
+    minHeight: "30px"
   };
 
   return (
@@ -29,7 +32,7 @@ const Router = ({ show }) => {
           backgroundColor: show ? 'white' : '#E3E6F3',
         }}
       >
-        <Tabs centered>
+        <Tabs centered sx={{minHeight: "0px"}}>
           <NavLink
             to='/'
             className={({ isActive }) =>
