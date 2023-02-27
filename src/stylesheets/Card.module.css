@@ -8,22 +8,22 @@
 }
 .heading1{
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 2rem;
   color: #3c3c3c;
   margin-bottom: 0;
   margin-top: 0;
   letter-spacing: 5px;
 }
 .heading2{
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #262627;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: 300;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .row{
-  padding-top: 7rem;;
+  padding-top: 15vh;
 }
 
 .product{
@@ -50,7 +50,7 @@
 }
 
 .title h6{
-  font-size:1.5rem;
+  font-size:1rem;
   font-family: "Poppins";
   color: #18181D;
   margin-bottom: 0;
@@ -59,7 +59,7 @@
 }
 
 .price{
-  font-size: 2rem;
+  font-size: 1rem;
   text-decoration: none;
 }
 
@@ -109,13 +109,6 @@
     letter-spacing: 0;
     font-size: 1rem;
   }
-  .title h6{
-    font-size:1rem;
-    margin-bottom: 0;
-  }
-  .price span{
-    font-size: 1.5rem;
-  }
 }
 @media screen and (min-width: 501px) and (max-width: 700px) {
   .product{
@@ -125,40 +118,28 @@
     padding: 20px 30px;
   }
   .heading1{
-    font-size: 2.5rem;
+    font-size: 1.4rem;
   }
   .heading2{
     font-size: 1rem;
     letter-spacing: 0;
-  }
-  .title h6{
-    font-size:1.3rem;
-    margin-bottom: 0;
-  }
-  .price span{
-    font-size: 2rem;
-    margin-top: 0;
   }
 }
 @media screen and (min-width: 701px) and (max-width: 1200px){
   .product{
     width: 250px
   }
-  .title h6{
-    font-size:1.3rem;
-    margin-bottom: 0;
-  }
-  .price span{
-    font-size: 2rem;
-    margin-top: 0;
-  }
 }
-@media screen and (min-width: 1300px) and (max-width: 1600px) {
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
   .product{
     width: 220px;
   }
 }
-
+@media screen and (min-width: 1500px) {
+  .product{
+    width:400px;
+  }
+}
 
 
 

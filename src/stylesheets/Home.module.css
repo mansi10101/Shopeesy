@@ -1,8 +1,6 @@
-
 /* The hero image */
 .heroImage {
   margin-top: 2vh;
-  /* height: ; */
   position: center;
   size: cover;
   width: 100%;
@@ -16,291 +14,400 @@
   top: 25%;
   left: 5%;
   color: rgb(14, 13, 13);
+  gap: 0.5rem;
 }
-.httext1{
-  font-size: 2rem;
+
+.httext1 {
+  font-size: 1rem;
   font-family: cursive;
   font-weight: bolder;
   margin-bottom: 1%;
 }
-.httext2{
+
+.httext2 {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-family: cursive;
   font-weight: bolder;
   letter-spacing: 3px;
 }
-.httext3{
-  font-size: 1.8rem;
+
+.httext3 {
+  font-size: 1rem;
   font-weight: bolder;
   letter-spacing: 3px;
 }
-.htbutton{
-    display:flex ;
-    padding:1rem 1rem;
-    margin:0 0.5rem 0.5rem 0;
-    border:0.16em solid rgba(255,255,255,0);
-    border-radius:2em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:bold;
-    color:#FFFFFF;
-    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-    text-align:center;
-    font-size: 1.2rem;
-    transition: all 0.2s;
-    width:fit-content;
-    }
-  .htbutton:hover{
-    border-color: black;
-  }
 
-  .section_m1{
-    margin: 40px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 40vh;
-    background-size: cover;
-    background-position: center;
-  }
-  .btext1{
-    margin: 0px 0px;
-    color: whitesmoke;
-    font-size: 28px;
-  }
-  .btext2{
-    color: white;
-    font-size: 40px;
-    margin: 10px 0px;
-  }
-  #mbanner h1 span{
-    color: red;
-  }
-  .bbutton{
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding: 15px 30px;
-    color: black;
-    background-color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: 0.3s;
-  }
-  .bbutton:hover{
-    background: #088178;
-    color: white;
-  }
-
-
-
-   /* SMBanner */
-
-#smbanner{
+.htbutton {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 1rem 1rem;
+  margin: 0 0.2rem 0.2rem 0;
+  border: 0.16em solid rgba(255, 255, 255, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  text-align: center;
+  font-size: 1rem;
+  transition: all 0.2s;
+  width: fit-content;
+}
+
+.htbutton:hover {
+  border-color: black;
+}
+
+.section_m1 {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 100%;
+  min-height: 30vh;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.btext1 {
+  margin: 0px 0px;
+  color: whitesmoke;
+  font-size: 1rem;
+}
+
+.btext2 {
+  color: white;
+  font-size: 1.5rem;
+  margin: 10px 0px;
+}
+
+#mbanner h1 span {
+  color: red;
+}
+
+.bbutton {
+  font-weight: 500;
+  padding: 10px 15px;
+  color: black;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+.bbutton:hover {
+  background: #088178;
+  color: white;
+}
+
+
+
+/* SMBanner */
+
+#smbanner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: no-wrap;
   padding-left: 6%;
   padding-right: 6%;
+  gap: 0.5rem;
 }
-#smbanner .banner_box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    min-width: 40vw;
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    padding: 40px;
-    margin-bottom: 20px;
+
+#smbanner .banner_box {
+  display: flex;
+  width: 10%;
+  aspect-ratio: 1 / 1;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
 }
-#smbanner h2{
+
+#smbanner h2 {
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 300;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 0;
   margin-top: 0;
 }
-#smbanner h1{
+
+#smbanner h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 0;
 }
-#smbanner span{
+
+#smbanner span {
   color: white;
   font-size: 1rem;
   padding-bottom: 15px;
 }
-.smbutton{
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 15px 20px;
-    color: white;
-    background-color: transparent;
-    cursor: pointer;
-    border: 1px solid white;
-    outline: none;
-    transition: 0.3s;
+
+.smbutton {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 15px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid white;
+  outline: none;
+  transition: 0.3s;
 }
-#smbanner .banner_box:hover button{
+
+#smbanner .banner_box:hover button {
   background: #088178;
   border: 1px solid #088178;
 }
 
-#smbanner2{
-  margin-top: 1%;
+#smbanner2 {
+  margin-top: 2%;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
   padding: 0 80px;
   padding-left: 6%;
-  padding-right: 6%;  
+  padding-right: 6%;
+  gap: 0.5rem;
 }
-#smbanner2 .banner_box{
+
+
+#smbanner2 .banner_box {
   display: flex;
+  aspect-ratio: 1 / 1;
+  width: 30%;
+  flex-grow: 1;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  min-width: 30%;
-  height: 40vh; 
   background-size: cover;
   background-position: center;
   padding: 20px;
-  margin-bottom: 20px;
 }
-#smbanner2 h2{
-  color:rgb(255, 254, 254);
-  font-size: 1.5rem;
+
+#smbanner2 h2 {
+  color: rgb(255, 254, 254);
+  font-size: 1rem;
   font-weight: 300;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 0;
   margin-top: 0;
 }
-#smbanner2 h1{
+
+#smbanner2 h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-  @media screen and (min-width: 320px) and (max-width: 499px) {
-    .httext1{
-      font-size: 1rem;
-    }
-    .httext2{
-      font-size: 1.3rem;
-    }
-    .httext3{
-      font-size: 0.4rem;
-      letter-spacing: 1px;
-    }
-    .htbutton{
-      display: block;
-      font-size: 0.5rem;
-    }
-    /* .heroImage {
-      margin-top: 2.7rem;
-    } */
-    #mbanner h2{
-      font-size: 1rem;
-    }
-    #mbanner h1{
-      font-size: 1.5rem;
-    }
-    #mbanner .bbutton{
-      font-size: 1rem;
-      padding: 10px 15px;
-    }
-    #smbanner h1{
-      font-size: 2rem;
-    }
-    #smbanner h2{
-      font-size: 1.5rem;
-    }
-    #smbanner2 h1{
-      font-size: 2rem;
-    }
-    #smbanner2 h2{
-      font-size: 1.5rem;
-    }
-  }
-  @media screen and (min-width: 500px) and (max-width: 900px) {
-    .httext1{
-      font-size: 1.5rem;
-    }
-    .httext2{
-      font-size: 2rem;
-    }
-    .httext3{
-      font-size: 0.7rem;
-      letter-spacing: 1px;
-    }
-    .htbutton{
-      font-size: 0.8rem;
-    }
-    .btext2{
-      font-size: 1rem;
-    }
-    #mbanner h2{
-      font-size: 1.5rem;
-    }
-    #mbanner h1{
-      font-size: 2rem;
-    }
-    #mbanner .bbutton{
-      font-size: 1rem;
-      padding: 10px 15px
-    }
-    .banner_box{
-      width: 100%;
-    }
-    #smbanner h1{
-      font-size: 2rem;
-    }
-    #smbanner h2{
-      font-size: 1.5rem;
-    }
-  }
-  @media screen and (min-width: 900px) and (max-width:1400px) {
-    .httext1{
-      font-size: 1.7rem;
-    }
-    .httext2{
-      font-size: 3rem;
-      letter-spacing: 3px;
-    }
-    .httext3{
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-    }
-    .htbutton{
-      font-size: 1rem;
-    }
-    .banner_box{
-      width: 50%;
-    }
-    #smbanner h1{
-      font-size: 2rem;
-    }
-    #smbanner h2{
-      font-size: 1.5rem;
-    }
+@media screen and (min-width: 320px) and (max-width: 499px) {
+  .httext1 {
+    font-size: 1rem;
   }
 
+  .httext2 {
+    font-size: 1.3rem;
+  }
 
+  .httext3 {
+    font-size: 0.4rem;
+    letter-spacing: 1px;
+  }
 
- 
+  .htbutton {
+    display: block;
+    font-size: 0.5rem;
+  }
+
+  #mbanner h2 {
+    font-size: 1rem;
+  }
+
+  #mbanner h1 {
+    font-size: 1.5rem;
+  }
+
+  #mbanner .bbutton {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  #smbanner,
+  #smbanner2 {
+    display: grid;
+    justify-content: center;
+  }
+
+  #smbanner .banner_box {
+    width: 90vw;
+    height: 30vh;
+  }
+
+  #smbanner h1 {
+    font-size: 1rem;
+  }
+
+  #smbanner h2 {
+    font-size: 0.5rem;
+  }
+     #smbanner span {
+       font-size: 0.5rem;
+     }
+
+  #smbanner2 .banner_box {
+    width: 90vw;
+    height: 30vh;
+  }
+
+  #smbanner2 h1 {
+    font-size: 1rem;
+  }
+
+  #smbanner2 h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .httext1 {
+    font-size: 1.5rem;
+  }
+
+  .httext2 {
+    font-size: 2rem;
+  }
+
+  .httext3 {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
+
+  .htbutton {
+    font-size: 0.8rem;
+  }
+
+  .btext2 {
+    font-size: 1rem;
+  }
+
+  #mbanner h2 {
+    font-size: 1.5rem;
+  }
+
+  #mbanner h1 {
+    font-size: 2rem;
+  }
+
+  #smbanner .banner_box {
+    padding: 10px;
+  }
+
+  #mbanner .bbutton {
+    font-size: 1rem;
+    padding: 10px 15px
+  }
+
+  #smbanner h1 {
+    font-size: 1.2rem;
+  }
+
+  #smbanner h2 {
+    font-size: 0.7rem;
+  }
+     #smbanner span {
+       font-size: 0.7rem;
+     }
+
+  #smbanner2 h1 {
+    font-size: 1rem;
+  }
+ #smbanner2 .banner_box {
+   padding: 10px;
+ }
+  #smbanner2 h2 {
+    font-size: 0.6rem;
+  }
+
+  .smbutton {
+    padding: 7px 10px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width:900px) {
+  .httext1 {
+    font-size: 1.7rem;
+  }
+
+  .httext2 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+
+  .httext3 {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+
+  .htbutton {
+    font-size: 1rem;
+  }
+    #smbanner .banner_box {
+      padding: 10px;
+    }
+
+  #smbanner h1 {
+    font-size: 1.5rem;
+  }
+
+  #smbanner h2 {
+    font-size: 1rem;
+  }
+
+    #smbanner span {
+      font-size: 1rem;
+    }
+  #smbanner2 h1 {
+    font-size: 1.5rem;
+  }
+
+  #smbanner2 h2 {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1400) {
+  .httext1 {
+    font-size: 1.7rem;
+  }
+
+  .httext2 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+
+  .httext3 {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+
+  .htbutton {
+    font-size: 1rem;
+  }
+}

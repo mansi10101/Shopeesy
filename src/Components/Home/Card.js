@@ -17,7 +17,7 @@ const Card = ({ product }) => {
         </div>
         <div className={styles.card_content}>
           <div className={styles.star}>
-            <Rating name='read-only' value={product.rating} readOnly />
+            <Rating sx={{fontSize:"1rem"}} name='read-only' value={product.rating} readOnly />
           </div>
 
           <div className={styles.price}>

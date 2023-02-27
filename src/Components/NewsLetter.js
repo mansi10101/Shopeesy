@@ -11,7 +11,7 @@ const NewsLetter = () => {
                 </div>
                 <div className={styles.submitform} >
                     <input type="text" placeholder='Your Email Address'></input>
-                    <button>Sign Up</button>
+                    <button className={styles.nlbtn }>Sign Up</button>
                 </div>
             </section>
         </Fragment>

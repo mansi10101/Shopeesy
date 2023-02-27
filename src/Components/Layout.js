@@ -34,7 +34,7 @@ const Layout = () => {
         <div
           style={{
             display: 'grid',
-            gap: '20',
+            gap: '20'
           }}
         >
           <BrowserRouter>

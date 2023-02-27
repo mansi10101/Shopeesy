@@ -10,11 +10,14 @@ const HeroBanner = () => {
     <motion.div variants={ani_header} className={styles.heroImage}>
       <img className={styles.heroImage} src={image} alt='hero' />
       <motion.div variants={ani_content} className={styles.heroText}>
-        <motion.p variants={ani_content} className={styles.httext1}>Trade-in Offer</motion.p>
-        <motion.p variants={ani_content} className={styles.httext2}> Super value deals</motion.p>
-        <motion.p variants={ani_content} className={styles.httext2} style={{ color: 'green' }}>
-          On all products
+        <motion.p variants={ani_content} className={styles.httext1}>
+          Trade-in Offer
         </motion.p>
+        <motion.p variants={ani_content} className={styles.httext2}>
+          Super value deals<br/>
+          <span style={{ color: 'green' }}>On all products</span>
+        </motion.p>
+
         <motion.p variants={ani_content} className={styles.httext3}>
           Save more with Coupons and upto 70% off!
         </motion.p>

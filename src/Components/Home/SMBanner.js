@@ -9,7 +9,7 @@ import { useCartContext } from '../../context/cart_context';
 import { motion } from 'framer-motion';
 
 const SMBanner = () => {
-  const {ani_content} = useCartContext();
+  const { ani_content } = useCartContext();
   return (
     <motion.div variants={ani_content}>
       <section id={styles.smbanner}>
@@ -22,6 +22,7 @@ const SMBanner = () => {
           <span>The best classic dress is on sale at shopeesy</span>
           <button className={styles.smbutton}>Learn More</button>
         </div>
+
         <div
           className={styles.banner_box}
           style={{ backgroundImage: `url(${img2})` }}
@@ -40,6 +41,7 @@ const SMBanner = () => {
           <h1>SEASONAL SALE</h1>
           <h2>Winter Collection - 50% off</h2>
         </div>
+
         <div
           className={styles.banner_box}
           style={{ backgroundImage: `url(${img4})` }}
@@ -47,6 +49,7 @@ const SMBanner = () => {
           <h1>SEASONAL SALE</h1>
           <h2>Winter Collection - 50% off</h2>
         </div>
+
         <div
           className={styles.banner_box}
           style={{ backgroundImage: `url(${img5})` }}
