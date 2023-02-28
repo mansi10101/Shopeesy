@@ -13,7 +13,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Alert from './Alert';
 import { motion } from 'framer-motion';
-
+import PaymentIcon from '@mui/icons-material/Payment';
 
 
 const Product = () => {
@@ -83,20 +83,30 @@ const Product = () => {
               blanditiis odio quam suscipit non hic omnis.
             </p>
             <p>
-              Rating: <Rating name='read-only' value='5' readOnly />
+              Rating:{' '}
+              <Rating
+                sx={{ fontSize: 'medium' }}
+                name='read-only'
+                value='5'
+                readOnly
+              />
             </p>
 
             <div className={styles.product_warranty}>
               <div className={styles.product_details}>
-                <LocalShippingIcon fontSize='large' />
+                <LocalShippingIcon fontSize='medium' />
                 <p>Free Delivery</p>
               </div>
               <div className={styles.product_details}>
-                <FindReplaceIcon fontSize='large' />
+                <FindReplaceIcon fontSize='medium' />
                 <p> 30 Days Replacement</p>
               </div>
               <div className={styles.product_details}>
-                <LocalShippingIcon fontSize='large' />
+                <PaymentIcon fontSize='medium' />
+                <p>COD Available</p>
+              </div>
+              <div className={styles.product_details}>
+                <LocalShippingIcon fontSize='medium' />
                 <p>Fast Delivery</p>
               </div>
             </div>
@@ -105,38 +115,38 @@ const Product = () => {
                 display: 'flex',
                 alignItems: 'baseline',
                 fontWeight: '500',
-                fontSize: '1.5rem',
+                fontSize: '1rem',
               }}
             >
               Size :
-              <FormControl sx={{ m: 1, minWidth: 120 }}>
+              <FormControl sx={{ minWidth: 120 }}>
                 <Select
-                  sx={{ fontWeight: 545, fontSize: 22 }}
+                  sx={{ fontWeight: 545, fontSize: 15 }}
                   value={size}
                   onChange={handleChange}
                   displayEmpty
                   inputProps={{ 'aria-label': 'Without label' }}
                 >
-                  <MenuItem sx={{ fontWeight: 545, fontSize: 18 }} value=''>
+                  <MenuItem sx={{ fontWeight: 545, fontSize: 15 }} value=''>
                     <em>Select</em>
                   </MenuItem>
-                  <MenuItem sx={{ fontWeight: 545, fontSize: 18 }} value={'S'}>
+                  <MenuItem sx={{ fontWeight: 545, fontSize: 15 }} value={'S'}>
                     S
                   </MenuItem>
-                  <MenuItem sx={{ fontWeight: 545, fontSize: 18 }} value={'M'}>
+                  <MenuItem sx={{ fontWeight: 545, fontSize: 15 }} value={'M'}>
                     M
                   </MenuItem>
-                  <MenuItem sx={{ fontWeight: 545, fontSize: 18 }} value={'L'}>
+                  <MenuItem sx={{ fontWeight: 545, fontSize: 15 }} value={'L'}>
                     L
                   </MenuItem>
-                  <MenuItem sx={{ fontWeight: 545, fontSize: 18 }} value={'XL'}>
+                  <MenuItem sx={{ fontWeight: 545, fontSize: 15 }} value={'XL'}>
                     XL
                   </MenuItem>
                 </Select>
                 {error && size === '' && (
                   <h3
                     style={{
-                      fontSize: '20px',
+                      fontSize: '15px',
                       fontWeight: '400',
                       color: 'red',
                     }}
@@ -146,12 +156,16 @@ const Product = () => {
                 )}
               </FormControl>
             </h3>
-
-            <Quantity
-              quantity={quantity}
-              setIncrease={setIncrease}
-              setDecrease={setDecrease}
-            />
+            <div className={styles.product_quan}>
+              <div>Quantity : &nbsp; </div>
+              <div>
+                <Quantity
+                  quantity={quantity}
+                  setIncrease={setIncrease}
+                  setDecrease={setDecrease}
+                />
+              </div>
+            </div>
 
             <button
               className={styles.addtocartbtn}
