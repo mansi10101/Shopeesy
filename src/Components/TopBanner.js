@@ -12,8 +12,7 @@ const TopBanner = ({ image, title, text }) => {
         className={styles.section_m1}
         style={{
           backgroundImage: `url(${image})`,
-          marginTop: '100px',
-          minHeight: '40vh',
+          minHeight: '30vh',
         }}
       >
         <h1 className={styles.btext2} style={{ fontFamily: 'cursive' }}>
