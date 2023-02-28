@@ -255,7 +255,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10%;
+  /* margin-top: 2%; */
 }
 
 @media screen and (min-width: 320px) and (max-width: 499px) {
@@ -312,7 +312,7 @@
   }
 
   .svg {
-    margin-top: 30%;
+    margin-top: 20%;
   }
 }
 
@@ -327,15 +327,8 @@
     margin-top: 0;
   }
 
-  /* .product {
-    width: 200px;
-  } */
-
-  /* .cards {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
-  } */
   .svg {
-    margin-top: 30%;
+    margin-top: 10%;
   }
 }
 
@@ -362,25 +355,15 @@
     height: 30vh;
   }
 
-  /* .product {
-    width: 250px;
-  }
-
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
-  } */
   .svg {
-    margin-top: 25%;
+    margin-top: 10%;
   }
 }
 
 
 @media screen and (min-width: 900px) and (max-width: 1500px) {
 
-  /* .product {
-    width: 250px
-  } */
   .svg {
-    margin-top: 20%;
+    margin-top: 10%;
   }
 }
