@@ -20,7 +20,7 @@ const CartItems = ({ id, name, img,size, price, quantity, cartLength }) => {
           <Link to={`/product/${id} `}>
             <div className={styles.item}>
               <h2>{name}</h2>
-              <h3>Size: {size}</h3>
+              <h2>Size: {size}</h2>
             </div>
           </Link>
           <div className={styles.item}>
