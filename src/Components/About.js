@@ -25,9 +25,9 @@ const About = () => {
 
         <motion.div variants={ani_content} className={styles.app}>
           <div className={styles.details}>
-            <div className={styles.big_img}>
+            <motion.div variants={ani_content} className={styles.big_img}>
               <img src={image} alt='' />
-            </div>
+            </motion.div>
             <div className={styles.box}>
               <div className={styles.row}>
                 <h2>Who Are We?</h2>

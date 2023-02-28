@@ -1,8 +1,6 @@
 .contact {
     max-width: 1600px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     background-color: white;
 }
 
@@ -12,22 +10,24 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 30px 0;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .address {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    max-width: 800px;
+    max-width: 600px;
     min-width: 290px;
     background-color: white;
-    padding: 20px;
+    align-content: center;
+    gap: 0.6rem
 }
 
 .location .map {
     min-width: 290px;
     overflow: hidden;
-    margin: 25px;
 }
 
 .map iframe {
@@ -39,19 +39,20 @@
 }
 
 .address h1 {
-    font-size: 3rem;
-    font-family: "cursive";
+    font-size: 2rem;
+    margin-top: 0;
+    font-family: "Trebuchet MS";
 }
 
 .address h2 {
-    font-size: 1.7rem;
+    font-size: 1rem;
     color: rgb(104, 101, 99);
 }
 
 .address li {
     line-height: 1.5;
     margin: 15px 0;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 
 /* form  */
@@ -70,6 +71,7 @@
     width: 100%;
     height: auto;
     padding: 15px;
+    gap: 1rem;
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -86,11 +88,12 @@
 }
 
 .info h2{
+    font-size: 1rem;
     font-weight: 100;
     color: rgb(97, 97, 85);
 }
 .info h1{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-family: arial;
     font-weight: 550;
 }
@@ -98,9 +101,9 @@
 input,
 textarea {
     width: 100%;
-    padding: 20px 20px;
+    padding: 10px 20px;
     margin: 8px 0;
-    font-size: 1.3rem;
+    font-size: 0.7rem;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -137,5 +140,10 @@ input[type="submit"]:hover {
     justify-content: space-between;
 }
 .people_details h3{
+    font-size: 0.8rem;
    font-weight: 400;
+}
+.people_details h2 {
+    font-weight: 400;
+    font-size: 1rem;
 }
