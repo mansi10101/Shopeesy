@@ -5,15 +5,15 @@ import { useCartContext } from '../../context/cart_context';
 import { Divider } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-const CartItems = ({ id, name, img,size, price, quantity, cartLength }) => {
+const CartItems = ({ id, name, img, size, price, quantity, cartLength }) => {
   const { removeItem, setIncrease, setDecrease } = useCartContext();
 
   return (
     <Fragment>
       <div className={styles.product}>
         <Link to={`/product/${id} `}>
-          <div className={styles.p_img}>
-            <img src={img} alt='' />
+          <div>
+            <img className={styles.p_img} src={img} alt='product img' />
           </div>
         </Link>
         <div className={styles.p_details}>
@@ -29,14 +29,14 @@ const CartItems = ({ id, name, img,size, price, quantity, cartLength }) => {
           <div className={styles.item}>
             <Quantity
               quantity={quantity}
-              setIncrease={() => setIncrease(id,size)}
-              setDecrease={() => setDecrease(id,size)}
+              setIncrease={() => setIncrease(id, size)}
+              setDecrease={() => setDecrease(id, size)}
             />
           </div>
           <div className={styles.item}>
             <button
               className={styles.remove_button}
-              onClick={() => removeItem(id,size)}
+              onClick={() => removeItem(id, size)}
             >
               Remove
             </button>
