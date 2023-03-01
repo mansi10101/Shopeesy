@@ -38,7 +38,7 @@ const Navbar = () => {
   var theme = createTheme({
     palette: {
       secondary: {
-        dark: '#000000',
+        dark: 'black',
       },
     },
   });
@@ -68,7 +68,7 @@ const Navbar = () => {
                 <Link to={"/cart"} >
                 <Badge badgeContent={total_item} color="primary">
                 <ShoppingCartIcon
-                  sx={{ color: 'secondary.dark', fontDecoration:"none" }}
+                  sx={{ color: 'secondary.dark', textDecoration:"none" }}
                 />
                  </Badge>
                 </Link>
