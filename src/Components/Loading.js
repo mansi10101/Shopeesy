@@ -1,8 +1,9 @@
-import { Typography } from '@mui/material';
+import { Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import Loader from '../assets/loading.gif';
 
 const Loading = () => {
+  const isMobile = useMediaQuery("(max-width: 450px")
   return (
     <div
       style={{
@@ -17,16 +18,16 @@ const Loading = () => {
         backgroundColor: 'whitesmoke',
       }}
     >
-      <img style={{ height: '35vh' }} src={Loader} alt='' />
+      <img style={{ height: isMobile? "17vh" : '27vh' }} src={Loader} alt='' />
       <Typography
         sx={{
           postion: 'releative',
-          fontSize: 25,
-          fontFamily: 'cursive',
+          fontSize: 15,
+          fontFamily: 'Geneva, Verdana, sans-serif',
           fontWeight: 200,
           color: '#3c69a4',
           position: 'absolute',
-          marginTop: '210px',
+          marginTop: isMobile? "130px" : '150px',
           zIndex: 9,
         }}
       >

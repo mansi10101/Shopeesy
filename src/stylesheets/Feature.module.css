@@ -37,17 +37,13 @@ html {
 
 .cards {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  padding: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .cards_item{
-  /* aspect-ratio: 1/1; */
-  width: 60px;
-  height: auto;
-  flex-grow: 1;
+  width: 120px;
 }
 
 .card {
@@ -60,8 +56,11 @@ html {
   padding-top: 5px;
 }
 @media screen and (width <= 400px) {
+  /* .cards{
+    display: grid;
+  } */
   .cards_item {
-    width: 50px;
+    width: 70px;
   }
 
   .card_content p {
@@ -73,7 +72,7 @@ html {
 }
 @media screen and (400px <= width <= 500px){
   .cards_item{
-    width: 60px;
+    width: 70px;
   }
     .card_content p{
       font-size: 0.7rem;
@@ -81,7 +80,7 @@ html {
 }
 @media screen and (500px <= width <= 700px) {
   .cards_item {
-    width: 60px;
+    width: 80px;
   }
 
   .card_content p {

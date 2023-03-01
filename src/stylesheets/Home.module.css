@@ -229,16 +229,16 @@
     margin-top: 3vh;
   }
   .httext1 {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 
   .httext2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     letter-spacing: 0;
   }
 
   .httext3 {
-    font-size: 0.4rem;
+    font-size: 0.6rem;
     letter-spacing: 0;
   }
 
@@ -299,11 +299,11 @@
 
 @media screen and (min-width: 500px) and (max-width: 700px) {
   .httext1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .httext2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .httext3 {
@@ -364,11 +364,11 @@
 
 @media screen and (min-width: 700px) and (max-width:900px) {
   .httext1 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   .httext2 {
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 3px;
   }
 
