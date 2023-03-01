@@ -7,7 +7,8 @@ const TopBanner = ({ image, title, text }) => {
   const {ani_header} = useCartContext();
   return (
     <Fragment>
-      <motion.div variants={ani_header}
+      <motion.div
+        variants={ani_header}
         id={styles.mbanner}
         className={styles.section_m1}
         style={{
@@ -15,7 +16,10 @@ const TopBanner = ({ image, title, text }) => {
           minHeight: '30vh',
         }}
       >
-        <h1 className={styles.btext2} style={{ fontFamily: 'cursive' }}>
+        <h1
+          className={styles.btext2}
+          style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+        >
           {' '}
           <span> #</span>
           {title}

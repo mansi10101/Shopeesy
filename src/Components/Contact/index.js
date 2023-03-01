@@ -4,6 +4,7 @@ import bimage from '../../assets/img/about/banner.png';
 import Address from './Address';
 import { motion } from 'framer-motion';
 import { useCartContext } from '../../context/cart_context';
+import styles from "../../stylesheets/Contact.module.css"
 
 
 const Contact = () => {
@@ -20,7 +21,7 @@ const Contact = () => {
             title='lets_talk'
             text='LEAVE A MESSAGE! We love to hear from you :)'
           />
-        <motion.div variants={ani_content}>
+        <motion.div variants={ani_content} className={styles.main_container} >
           <Address />
         </motion.div>
       </motion.div>
