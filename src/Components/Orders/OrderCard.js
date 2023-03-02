@@ -8,8 +8,8 @@ const OrderCard = ({id, name,size, img, price, quantity}) => {
       <div className={styles.Cart_box}>
         <div className={styles.product}>
           <Link to={`/product/${id} `}>
-            <div className={styles.p_img}>
-              <img src={img} alt='' />
+            <div>
+              <img className={styles.p_img} src={img} alt='' />
             </div>
           </Link>
           <div className={styles.p_details}>

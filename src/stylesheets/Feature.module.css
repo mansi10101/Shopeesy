@@ -37,9 +37,9 @@ html {
 
 .cards {
   display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .cards_item{

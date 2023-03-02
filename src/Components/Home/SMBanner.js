@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 const SMBanner = () => {
   const { ani_content } = useCartContext();
   return (
-    <motion.div variants={ani_content}>
+    <motion.div variants={ani_content} className={styles.smbanner_container}>
       <section id={styles.smbanner}>
         <div
           className={styles.banner_box}
