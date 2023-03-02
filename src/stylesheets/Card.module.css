@@ -66,7 +66,7 @@
 }
 
 .title h6{
-  font-size:1rem;
+  font-size:0.9rem;
   font-family: "Poppins";
   color: #18181D;
   margin-bottom: 0;
@@ -74,12 +74,9 @@
 
 }
 
-.price{
-  font-size: 1rem;
-  text-decoration: none;
-}
-
 .price span{
+    font-size: 1rem;
+      text-decoration: none;
   color: black;
   font-weight: 700;
   font-family: "arial";
@@ -129,6 +126,12 @@
     letter-spacing: 0;
     font-size: 1rem;
   }
+  .title h6{
+    font-size: 0.7rem;
+  }
+  .price span{
+    font-size: 0.7rem;
+  }
 }
 @media screen and (min-width: 400px) and (max-width: 500px) {
   .card_container {
@@ -148,6 +151,13 @@
     letter-spacing: 0;
     font-size: 1rem;
   }
+    .title h6 {
+      font-size: 0.7rem;
+    }
+  
+    .price span {
+      font-size: 0.7rem;
+    }
 }
 @media screen and (min-width: 500px) and (max-width: 600px) {
   .card_container{
@@ -166,6 +176,13 @@
     font-size: 1rem;
     letter-spacing: 0;
   }
+    .title h6 {
+      font-size: 0.7rem;
+    }
+  
+    .price span {
+      font-size: 0.7rem;
+    }
 }
 @media screen and (min-width: 600px) and (max-width: 700px) {
   .card_container {
@@ -188,6 +205,13 @@
     font-size: 1rem;
     letter-spacing: 0;
   }
+    .title h6 {
+      font-size: 0.7rem;
+    }
+  
+    .price span {
+      font-size: 0.7rem;
+    }
 }
 @media screen and (min-width: 700px) and (max-width: 800px) {
   .card_container {
@@ -197,6 +221,13 @@
   .product {
     width: 150px
   }
+    .title h6 {
+      font-size: 0.8rem;
+    }
+  
+    .price span {
+      font-size: 0.9rem;
+    }
 }
 @media screen and (min-width: 800px) and (max-width: 1000px){
   .card_container {
@@ -205,6 +236,13 @@
   .product{
     width: 160px
   }
+    .title h6 {
+      font-size: 0.7rem;
+    }
+  
+    .price span {
+      font-size: 0.8rem;
+    }
 }
 @media screen and (min-width: 1000px) and (max-width: 1300px) {
   .card_container {

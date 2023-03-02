@@ -15,14 +15,14 @@ const Featured = () => {
   return (
     <motion.div variants={ani_content}>
       <div className={styles.main}>
-        <ul className={styles.cards}>
+        <div className={styles.cards}>
           <SingleFeature image={f1} text='Free Shipping' colour='#FFC0CB' />
           <SingleFeature image={f2} text='Online Order' colour='#98FB98' />
           <SingleFeature image={f3} text='Save Money' colour='#ADD8E6' />
-          <SingleFeature image={f4} text='Promotions' colour='#D8BFD8' />
+          <SingleFeature image={f4} text='So. Promos' colour='#D8BFD8' />
           <SingleFeature image={f5} text='Happy Sell' colour='#DEB887' />
           <SingleFeature image={f6} text='24/7 Support' colour='#F0E68C' />
-        </ul>
+        </div>
       </div>
     </motion.div>
   );
