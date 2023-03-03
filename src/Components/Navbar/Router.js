@@ -5,7 +5,6 @@ import { ThemeProvider, useTheme } from '@mui/material';
 import styles from '../../stylesheets/Navbar.module.css';
 
 const Router = ({ show, mediaq }) => {
-  const path = process.env.REACT_APP_FOR_PATH;
   var theme = useTheme();
   const style = {
     color: 'black',
@@ -32,9 +31,9 @@ const Router = ({ show, mediaq }) => {
           backgroundColor: show ? 'white' : '#E3E6F3',
         }}
       >
-        <Tabs centered sx={{ minHeight: '0px' }}>
+        <Tabs centered sx={{minHeight: "0px"}}>
           <NavLink
-            to={path + "/"}
+            to='/'
             className={({ isActive }) =>
               isActive ? styles.active : styles.inactive
             }
@@ -42,7 +41,7 @@ const Router = ({ show, mediaq }) => {
             <Tab sx={style} label='Home' />
           </NavLink>
           <NavLink
-            to={path + '/shop'}
+            to='/shop'
             className={({ isActive }) =>
               isActive ? styles.active : styles.inactive
             }
@@ -50,7 +49,7 @@ const Router = ({ show, mediaq }) => {
             <Tab sx={style} label='Shop' />
           </NavLink>
           <NavLink
-            to={path + '/myorders'}
+            to='/myorders'
             className={({ isActive }) =>
               isActive ? styles.active : styles.inactive
             }
@@ -58,7 +57,7 @@ const Router = ({ show, mediaq }) => {
             <Tab sx={style} label='Orders' />
           </NavLink>
           <NavLink
-            to={path + '/about'}
+            to='/about'
             className={({ isActive }) =>
               isActive ? styles.active : styles.inactive
             }
@@ -66,7 +65,7 @@ const Router = ({ show, mediaq }) => {
             <Tab sx={style} label='about' />
           </NavLink>
           <NavLink
-            to={path + '/contact'}
+            to='/contact'
             className={({ isActive }) =>
               isActive ? styles.active : styles.inactive
             }
