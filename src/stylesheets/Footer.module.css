@@ -44,7 +44,7 @@ body {
 #newsletter .submitform {
     display: flex;
     flex-wrap: wrap;
-    justify-content: end;
+    justify-content: flex-end;
     flex-direction: row;
     flex-grow: 1;
 }

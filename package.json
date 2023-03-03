@@ -1,7 +1,7 @@
 {
   "name": "shopeesy",
   "version": "0.1.0",
-  "homepage": "https://mansi10101.github.io/Shopeesy",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

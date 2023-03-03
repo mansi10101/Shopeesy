@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Shop from './Shop';
 import About from './About';
@@ -17,6 +17,7 @@ import Loading from './Loading';
 const Layout = () => {
 
   const [loading, setLoading] = React.useState(true)
+  const path = process.env.REACT_APP_FOR_PATH;
 
   React.useEffect(() => {
     setTimeout(() =>{
@@ -27,34 +28,31 @@ const Layout = () => {
   return (
     <AnimatePresence>
       {loading ? (
-      
         <Loading />
-   
       ) : (
         <div
           style={{
             display: 'grid',
-            gap: '20'
+            gap: '20',
           }}
         >
-          <BrowserRouter>
-            <Navbar />
+          <HashRouter>
+            <Navbar baseline ="/" />
             <Routes>
-              <Route exact path='/' element={<Home />} />
-              <Route path='/shop' element={<Shop />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/product/:id' element={<Product />} />
-              <Route path='/cart' element={<Cart />} />
-              <Route path='/myorders' element={<Orders />} />
+              <Route exact path={path + '/'} element={<Home />} />
+              <Route path={path + '/shop'} element={<Shop />} />
+              <Route path={path + '/about'} element={<About />} />
+              <Route path={path + '/contact'} element={<Contact />} />
+              <Route path={path + '/product/:id'} element={<Product />} />
+              <Route path={path + '/cart'} element={<Cart />} />
+              <Route path={path + '/myorders'} element={<Orders />} />
             </Routes>
             <NewsLetter />
             <Footer />
-          </BrowserRouter>
+          </HashRouter>
         </div>
       )}
     </AnimatePresence>
-   
   );
 };
 

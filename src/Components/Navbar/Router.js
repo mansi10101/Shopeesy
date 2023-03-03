@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Tabs, Tab, Box } from '@mui/material';
-import { ThemeProvider, useMediaQuery, useTheme } from '@mui/material';
+import { ThemeProvider, useTheme } from '@mui/material';
 import styles from '../../stylesheets/Navbar.module.css';
 
 const Router = ({ show, mediaq }) => {
+  const path = process.env.REACT_APP_FOR_PATH;
   var theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.up('md'));
   const style = {
     color: 'black',
     fontSize: mediaq ? 10 : 22,
@@ -32,9 +32,9 @@ const Router = ({ show, mediaq }) => {
           backgroundColor: show ? 'white' : '#E3E6F3',
         }}
       >
-        <Tabs centered sx={{minHeight: "0px"}}>
+        <Tabs centered sx={{ minHeight: '0px' }}>
           <NavLink
-            to='/'
+            to={path + "/"}
             className={({ isActive }) =>
               isActive ? styles.active : styles.inactive
             }
@@ -42,7 +42,7 @@ const Router = ({ show, mediaq }) => {
             <Tab sx={style} label='Home' />
           </NavLink>
           <NavLink
-            to='/shop'
+            to={path + '/shop'}
             className={({ isActive }) =>
               isActive ? styles.active : styles.inactive
             }
@@ -50,7 +50,7 @@ const Router = ({ show, mediaq }) => {
             <Tab sx={style} label='Shop' />
           </NavLink>
           <NavLink
-            to='/myorders'
+            to={path + '/myorders'}
             className={({ isActive }) =>
               isActive ? styles.active : styles.inactive
             }
@@ -58,7 +58,7 @@ const Router = ({ show, mediaq }) => {
             <Tab sx={style} label='Orders' />
           </NavLink>
           <NavLink
-            to='/about'
+            to={path + '/about'}
             className={({ isActive }) =>
               isActive ? styles.active : styles.inactive
             }
@@ -66,7 +66,7 @@ const Router = ({ show, mediaq }) => {
             <Tab sx={style} label='about' />
           </NavLink>
           <NavLink
-            to='/contact'
+            to={path + '/contact'}
             className={({ isActive }) =>
               isActive ? styles.active : styles.inactive
             }
