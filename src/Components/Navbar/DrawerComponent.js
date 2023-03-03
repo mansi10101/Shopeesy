@@ -11,6 +11,7 @@ import { NavLink } from 'react-router-dom';
 import styles from '../../stylesheets/Navbar.module.css';
 
 function DrawerComponent() {
+  const path = process.env.REACT_APP_FOR_PATH;
   const [open, setOpen] = useState(false);
 
   return (
@@ -19,35 +20,35 @@ function DrawerComponent() {
         <List>
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-              <NavLink to='/'>
+              <NavLink to={path + '/'}>
                 <p className={styles.navlinks}>Home</p>
               </NavLink>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-              <NavLink  to='/shop'>
+              <NavLink to={path + '/shop'}>
                 <p className={styles.navlinks}>Shop</p>
               </NavLink>
             </ListItemText>
           </ListItem>{' '}
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-              <NavLink to='/myorders'>
+              <NavLink to={path + '/myorders'}>
                 <p className={styles.navlinks}>Orders</p>
               </NavLink>
             </ListItemText>
           </ListItem>{' '}
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-              <NavLink  to='/about'>
+              <NavLink to={path + '/about'}>
                 <p className={styles.navlinks}>About</p>
               </NavLink>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpen(false)}>
             <ListItemText>
-              <NavLink  to='/contact'>
+              <NavLink to={path + '/contact'}>
                 <p className={styles.navlinks}>Contact</p>
               </NavLink>
             </ListItemText>
